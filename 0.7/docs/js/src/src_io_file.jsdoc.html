@@ -1,0 +1,58 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">// vim: ft=cpp:foldmethod=marker:foldmarker={{{,}}}</span><span class="WHIT">
+<span class='line'>  2</span> </span><span class="COMM">/**
+<span class='line'>  3</span>  *
+<span class='line'>  4</span>  * @name IO.File
+<span class='line'>  5</span>  *
+<span class='line'>  6</span>  * @class
+<span class='line'>  7</span>  * File access from JavaScript. Files are instances of [[IO.Stream]]s.
+<span class='line'>  8</span>  *
+<span class='line'>  9</span>  * @extends IO.Stream
+<span class='line'> 10</span>  */</span><span class="WHIT">
+<span class='line'> 11</span> 
+<span class='line'> 12</span> 
+<span class='line'> 13</span> </span><span class="COMM">// IO.File instance methods {{{</span><span class="WHIT">
+<span class='line'> 14</span> </span><span class="COMM">/**#@+ @methodOf IO.File# */</span><span class="WHIT">
+<span class='line'> 15</span> 
+<span class='line'> 16</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 17</span>    * Open a file.
+<span class='line'> 18</span>    *
+<span class='line'> 19</span>    * @name open
+<span class='line'> 20</span>    * @param {string} filename file to open
+<span class='line'> 21</span>    */</span><span class="WHIT">
+<span class='line'> 22</span> 
+<span class='line'> 23</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 24</span>    * Close the open file handle.
+<span class='line'> 25</span>    *
+<span class='line'> 26</span>    * @name IO.File#close
+<span class='line'> 27</span>    */</span><span class="WHIT">
+<span class='line'> 28</span> 
+<span class='line'> 29</span> </span><span class="COMM">/**#@- }}} */</span><span class="WHIT">
+<span class='line'> 30</span> 
+<span class='line'> 31</span> </span><span class="COMM">// IO.File class methods {{{</span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="COMM">/**#@+ @methodOf IO.File */</span><span class="WHIT">
+<span class='line'> 33</span> 
+<span class='line'> 34</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 35</span>    * Create a file. No return value.
+<span class='line'> 36</span>    *
+<span class='line'> 37</span>    * @name create
+<span class='line'> 38</span>    * @param {string} name filename
+<span class='line'> 39</span>    * @param {int} [mode=0666] creation mode
+<span class='line'> 40</span>    */</span><span class="WHIT">
+<span class='line'> 41</span> 
+<span class='line'> 42</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 43</span>    * Check if a file exists.
+<span class='line'> 44</span>    * @name exists
+<span class='line'> 45</span>    * @type boolean
+<span class='line'> 46</span>    * @param {string} name filename
+<span class='line'> 47</span>    */</span><span class="WHIT">
+<span class='line'> 48</span> 
+<span class='line'> 49</span> </span><span class="COMM">/**#@- }}} */</span><span class="WHIT">
+<span class='line'> 50</span> 
+<span class='line'> 51</span> </span></pre></body></html>

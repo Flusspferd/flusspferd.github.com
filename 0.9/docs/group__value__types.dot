@@ -1,0 +1,12 @@
+digraph structs
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="Functions",height=0.2,width=0.4,color="black",URL="$group__functions.html"];
+  Node1 [label="Property types",height=0.2,width=0.4,color="black",URL="$group__property__types.html",tooltip="Types for dealing with object properties."];
+  Node0 [label="Value types",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node0->Node1 [shape=plaintext, label="flusspferd::array\nflusspferd::object", color="orange", dir="none", style="dashed"];
+  Node0->Node2 [shape=plaintext, label="flusspferd::function", color="orange", dir="none", style="dashed"];
+}

@@ -1,0 +1,1048 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Flusspferd JS Reference - Blob</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="index.html">Class Index</a>
+| <a href="files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="_global_">_global_</a></i></li>
+	
+	<li><a href="Array">Array</a></li>
+	
+	<li><a href="Blob">Blob</a></li>
+	
+	<li><a href="cURL">cURL</a></li>
+	
+	<li><a href="Environment">Environment</a></li>
+	
+	<li><a href="Function">Function</a></li>
+	
+	<li><a href="gmp">gmp</a></li>
+	
+	<li><a href="gmp.Float">gmp.Float</a></li>
+	
+	<li><a href="gmp.Integer">gmp.Integer</a></li>
+	
+	<li><a href="gmp.Rational">gmp.Rational</a></li>
+	
+	<li><a href="IO">IO</a></li>
+	
+	<li><a href="IO.BinaryStream">IO.BinaryStream</a></li>
+	
+	<li><a href="IO.File">IO.File</a></li>
+	
+	<li><a href="IO.Stream">IO.Stream</a></li>
+	
+	<li><a href="Object">Object</a></li>
+	
+	<li><a href="os">os</a></li>
+	
+	<li><a href="posix">posix</a></li>
+	
+	<li><a href="require">require</a></li>
+	
+	<li><a href="SQLite3">SQLite3</a></li>
+	
+	<li><a href="SQLite3.Cursor">SQLite3.Cursor</a></li>
+	
+	<li><a href="String">String</a></li>
+	
+	<li><a href="Util.Range">Util.Range</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Class Blob
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<div class="description">
+				
+			
+				<p>Binary data storage class.</p>
+<p>Javascript strings are stored as UTF8 bytes. This makes storing and
+processing strings in other encodings or random binary data (such as
+images) hard.</p>
+<p>To make this easier (and infact possible at all,) we've created the Blob
+class.</p>
+<p>You can treat a Blob similar to an array with its {@link #length} property
+and array sub-script accessors, but if you are using large blobs it is
+worth mentioning that each extra property you access this way requires
+extra memory from Spidermonkey. In this case its highly recomended you use
+<a href="#get">get</a> and <a href="#set">set</a> methods instead.</p>
+
+				
+				
+					<br /><i>Defined in: </i> <a href="src/src_core_blob.jsdoc.html">src/core/blob.jsdoc</a>.
+				
+			</div>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class Blob.">
+				<caption>Class Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="Blob">Blob</a></b>(lengthOrArray)
+							</div>
+							<div class="description"><p>Create a new Blob.</p>
+</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class Blob.">
+					<caption>Field Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Field Attributes</th>
+							<th scope="col">Field Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								<b>[][]</b>
+								</div>
+								<div class="description"><p>Array like access.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								<b><a href="Blob#length">length</a></b>
+								</div>
+								<div class="description"><p>Length of the blob in bytes.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								<b><a href="Blob#values">values</a></b>
+								</div>
+								<div class="description"><p>Iterator that returns values instead of array indicies.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								<b><a href="Blob#pairs">pairs</a></b>
+								</div>
+								<div class="description"><p>Iterator that returns [index,byte] pairs.</p>
+</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class Blob.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Blob.<b><a href="Blob#.fromUtf8">fromUtf8</a></b>(str)
+								</div>
+								<div class="description"><p>Create a blob from the UTF-8 byte sequence of str.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Blob.<b><a href="Blob#.fromUtf16">fromUtf16</a></b>(str)
+								</div>
+								<div class="description"><p>Create a blob from the UTF-16 (machine specific endianness) representation
+of str.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="Blob#append">append</a></b>(blob)
+								</div>
+								<div class="description"><p>Append data from another blob into this one.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="Blob#toArray">toArray</a></b>()
+								</div>
+								<div class="description"><p>Return an Array of bytes</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="Blob#clone">clone</a></b>()
+								</div>
+								<div class="description"><p>Return a new Blob instance containing a copy of the current contents.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="Blob#slice">slice</a></b>(from, to)
+								</div>
+								<div class="description"><p>Extract a portion of the data into a new Blob.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="Blob#asUtf8">asUtf8</a></b>()
+								</div>
+								<div class="description"><p>Convert to a UTF-8 string.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="Blob#asUtf16">asUtf16</a></b>()
+								</div>
+								<div class="description"><p>Convert to a UTF-16 string.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="Blob#get">get</a></b>(int)
+								</div>
+								<div class="description"><p>Get a byte of data.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="Blob#set">set</a></b>(int)
+								</div>
+								<div class="description"><p>Set a byte of data.</p>
+</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Class Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>Blob</b>(lengthOrArray)
+				</div>
+				
+				<div class="description">
+					<p>Create a new Blob. Pass either an array of integers (each one in the range
+[0,255]) to create a blob of those bytes, or pass a single integer to
+pre-allocate that many bytes to zero.</p>
+
+					
+				</div>
+				
+				
+				
+				
+					
+						<dl class="detailList">
+						<dt class="heading">Parameters:</dt>
+						
+							<dt>
+								 <b>lengthOrArray</b>
+								
+							</dt>
+								<dd><p>number of bytes to preallocate; or array of initial
+bytes.</p>
+</dd>
+						
+						</dl>
+					
+					
+					
+					
+					
+					
+					
+						<dl class="detailList">
+						<dt class="heading">See:</dt>
+						
+							<dd><a href="cURL">cURL</a></dd>
+						
+						</dl>
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+				<div class="sectionTitle">
+					Field Detail
+				</div>
+				
+					<a name="[]"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>[]</b>
+					
+					</div>
+					<div class="description">
+						<p>Array like access. Cannot change the length of the blob.</p>
+
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="length"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>length</b>
+					
+					</div>
+					<div class="description">
+						<p>Length of the blob in bytes. Setting this value will resize the blob, with
+new entries initalized to 0.</p>
+
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="values"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>values</b>
+					
+					</div>
+					<div class="description">
+						<p>Iterator that returns values instead of array indicies.</p>
+
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">for (var byte in blob.values) { ... }</pre>
+					
+					
+
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="pairs"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>pairs</b>
+					
+					</div>
+					<div class="description">
+						<p>Iterator that returns [index,byte] pairs.</p>
+
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">for (var [idx,byte] in blob.pairs) { ... }</pre>
+					
+					
+
+						
+						
+						
+						
+
+					
+				
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".fromUtf8"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{<a href="Blob">Blob</a>}</span>
+					<span class="light">Blob.</span><b>fromUtf8</b>(str)
+					
+					</div>
+					<div class="description">
+						<p>Create a blob from the UTF-8 byte sequence of str.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>str</b>
+									
+								</dt>
+								<dd><p>data</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".fromUtf16"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{<a href="Blob">Blob</a>}</span>
+					<span class="light">Blob.</span><b>fromUtf16</b>(str)
+					
+					</div>
+					<div class="description">
+						<p>Create a blob from the UTF-16 (machine specific endianness) representation
+of str.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>str</b>
+									
+								</dt>
+								<dd><p>data</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="append"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="Blob">Blob</a>}</span>
+					<b>append</b>(blob)
+					
+					</div>
+					<div class="description">
+						<p>Append data from another blob into this one.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="Blob">Blob</a>}</span> <b>blob</b>
+									
+								</dt>
+								<dd><p>blob to append to this.</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="toArray"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="Array">Array</a>}</span>
+					<b>toArray</b>()
+					
+					</div>
+					<div class="description">
+						<p>Return an Array of bytes</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="clone"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="Blob">Blob</a>}</span>
+					<b>clone</b>()
+					
+					</div>
+					<div class="description">
+						<p>Return a new Blob instance containing a copy of the current contents.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="slice"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="Blob">Blob</a>}</span>
+					<b>slice</b>(from, to)
+					
+					</div>
+					<div class="description">
+						<p>Extract a portion of the data into a new Blob. Either parameter can be
+negative, in which case it counts backwards from
+the last byte:</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{int}</span> <b>from</b>
+									
+								</dt>
+								<dd><p>start index</p>
+</dd>
+							
+								<dt>
+									<span class="light fixedFont">{int}</span> <b>to</b>
+									<i>Optional</i>
+								</dt>
+								<dd><p>end index</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="asUtf8"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string}</span>
+					<b>asUtf8</b>()
+					
+					</div>
+					<div class="description">
+						<p>Convert to a UTF-8 string. This method treats the bytes as a UTF-8 byte
+sequence.</p>
+
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">(new Blob([66,66])).asUtf8(); // "BB"
+(new Blob([66,0xC3,0xE9])).asUtf8(); // "Bé"
+(new Blob([66,200,200])).asUtf8(); // TypeError</pre>
+					
+					
+					
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Throws:</dt>
+							
+								<dt>
+									 <b></b>
+								</dt>
+								<dd><p>TypeError If the blob contains an invalid UTF-8 sequence</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="asUtf16"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string}</span>
+					<b>asUtf16</b>()
+					
+					</div>
+					<div class="description">
+						<p>Convert to a UTF-16 string. Similar to <a href="#asUtf8">#asUtf8</a>, but instead treat
+the bytes as a UTF-16 byte sequence.</p>
+<p><br /><br />
+Since spidermonkey currently does not handle UTF-16 surrogates (i.e. any
+characters outside of hte Basic-Multi-Lingual plane) this method shouldn't
+throw a TypeError.</p>
+
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">(new Blob([66,0,66,0]).asUtf16(); // "BB"
+(new Blob([66,0,0xE9,0]).asUtf16(); // "Bé"</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="get"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>get</b>(int)
+					
+					</div>
+					<div class="description">
+						<p>Get a byte of data. Provided as alternative means to access data in large
+blobs without memory bloat.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>int</b>
+									
+								</dt>
+								<dd><p>idx byte index</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="set"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>set</b>(int)
+					
+					</div>
+					<div class="description">
+						<p>Set a byte of data. idx must be less than the current <a href="#length">#length</a></p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>int</b>
+									
+								</dt>
+								<dd><p>idx byte index</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.1.0 on Thu Jun 18 2009 11:05:39 GMT-0000 (UTC)
+		</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7744305-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+	</body>
+</html>

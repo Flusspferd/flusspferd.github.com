@@ -1,0 +1,60 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">// vim: ft=cpp:foldmethod=marker:foldmarker={{{,}}}</span><span class="WHIT">
+<span class='line'>  2</span> </span><span class="COMM">/**
+<span class='line'>  3</span>  * @namespace posix - posix system interface
+<span class='line'>  4</span>  * @name posix
+<span class='line'>  5</span>  *
+<span class='line'>  6</span>  */</span><span class="WHIT">
+<span class='line'>  7</span> 
+<span class='line'>  8</span> </span><span class="COMM">/**#@+ @fieldOf posix# */</span><span class="WHIT">
+<span class='line'>  9</span> </span><span class="COMM">/**
+<span class='line'> 10</span>  * number of last error. See errno(3).
+<span class='line'> 11</span>  *
+<span class='line'> 12</span>  * @name errno
+<span class='line'> 13</span>  * @type int
+<span class='line'> 14</span>  */</span><span class="WHIT">
+<span class='line'> 15</span> 
+<span class='line'> 16</span> </span><span class="COMM">/**#@+ @methodOf posix# */</span><span class="WHIT">
+<span class='line'> 17</span> </span><span class="COMM">/**
+<span class='line'> 18</span>  * return string describing error number. See strerror(3).
+<span class='line'> 19</span>  *
+<span class='line'> 20</span>  * @name strerror
+<span class='line'> 21</span>  * @param errnum number of error
+<span class='line'> 22</span>  * @returns the string describing the error number
+<span class='line'> 23</span>  */</span><span class="WHIT">
+<span class='line'> 24</span> 
+<span class='line'> 25</span> </span><span class="COMM">/**
+<span class='line'> 26</span>  * print a system error message. See perror(3).
+<span class='line'> 27</span>  *
+<span class='line'> 28</span>  * @name perror
+<span class='line'> 29</span>  * @param s additional message
+<span class='line'> 30</span>  */</span><span class="WHIT">
+<span class='line'> 31</span> 
+<span class='line'> 32</span> </span><span class="COMM">/**
+<span class='line'> 33</span>  * create a child process. See fork(2).
+<span class='line'> 34</span>  * WARNING: fork breaks the repl at the moment!
+<span class='line'> 35</span>  *
+<span class='line'> 36</span>  * @name fork
+<span class='line'> 37</span>  * @returns On success, the PID of the child process is returned in the parent, and 0 is returned in the child.  On failure, -1 is returned in the parent, no child process is created, and errno is set appropriately.
+<span class='line'> 38</span>  */</span><span class="WHIT">
+<span class='line'> 39</span> 
+<span class='line'> 40</span> </span><span class="COMM">/**
+<span class='line'> 41</span>  * delay for a specified number of seconds. See sleep(3).
+<span class='line'> 42</span>  *
+<span class='line'> 43</span>  * @name sleep
+<span class='line'> 44</span>  * @param seconds the amount of seconds to sleep
+<span class='line'> 45</span>  */</span><span class="WHIT">
+<span class='line'> 46</span> 
+<span class='line'> 47</span> </span><span class="COMM">/**
+<span class='line'> 48</span>  * suspend execution for microsecond intervals. See usleep(3).
+<span class='line'> 49</span>  *
+<span class='line'> 50</span>  * @name usleep
+<span class='line'> 51</span>  * @param usec the amount of microseconds to sleep
+<span class='line'> 52</span>  */</span><span class="WHIT">
+<span class='line'> 53</span> </span></pre></body></html>

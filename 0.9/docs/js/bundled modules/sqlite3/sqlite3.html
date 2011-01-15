@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>HippoDoc | sqlite3.SQLite3 class</title>
+  <meta name="generator" content="PDoc" />
+  
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/prototype.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/application.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../javascripts/code_highlighter.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../javascripts/tabs.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/item_index.js"></script>
+  	  
+  <link type="text/css" href="../../stylesheets/api.css" media="screen, projection" charset="utf-8" rel="stylesheet" />
+  
+  <script type="text/javascript">
+    PDoc.pathPrefix = '../../';
+  </script>
+</head>
+  <body>
+
+    <div id="sidebar">
+      <ul id="sidebar_tabs" class="sidebar-tabs">
+        <li>
+          <a href="#menu_pane">Menu</a>
+        </li>
+        <li>
+          <a href="#search_pane">Search</a>
+        </li>
+      </ul> <!-- .sidebar-tabs -->
+
+      <form class="search-ribbon">
+        <label>
+          <span class="hidden">Search</span>
+          <input type="text" id="search" size="20" title="Search" />
+        </label>
+      </form>
+      
+      <div class="sidebar-pane scrollable" id="menu_pane">
+        <ul id="api_menu" class="menu-items">
+          
+            <li class="current-parent">              <div class='menu-item'>
+                <a href="../../bundled_modules_section.html" title="Bundled Modules section (section)" class="section">Bundled Modules section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../bundled modules/curl.html" title="cURL (namespace)" class="namespace">cURL</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/curl/easy.html" title="cURL.Easy (class)" class="class">cURL.Easy</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp.html" title="gmp (namespace)" class="namespace">gmp</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)" class="mixin">gmp.Base</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/float.html" title="gmp.Float (class)" class="class">gmp.Float</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/integer.html" title="gmp.Integer (class)" class="class">gmp.Integer</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/rational.html" title="gmp.Rational (class)" class="class">gmp.Rational</a>
+              </div>
+</li></ul></li>
+<li class="current-parent">              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3.html" title="sqlite3 (namespace)" class="namespace">sqlite3</a>
+              </div>
+<ul class=""><li class="current">              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3.html" title="sqlite3.SQLite3 (class)" class="class">sqlite3.SQLite3</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3/cursor.html" title="sqlite3.SQLite3.Cursor (class)" class="class">sqlite3.SQLite3.Cursor</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3/cursor.html" title="sqlite3.SQLite3.Cursor (class)" class="class">sqlite3.SQLite3.Cursor</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml.html" title="xml (namespace)" class="namespace">xml</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/domimplementation.html" title="xml.DOMImplementation (class)" class="class">xml.DOMImplementation</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/htmlparser.html" title="xml.HTMLParser (class)" class="class">xml.HTMLParser</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/xmlparser.html" title="xml.XMLParser (class)" class="class">xml.XMLParser</a>
+              </div>
+</li></ul></li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../commonjs_core_section.html" title="CommonJS Core section (section)" class="section">CommonJS Core section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../commonjs core/dollarrequire.html" title="$require (utility)" class="utility">$require</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary.html" title="binary (namespace)" class="namespace">binary</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/binary.html" title="binary.Binary (mixin)" class="mixin">binary.Binary</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/bytearray.html" title="binary.ByteArray (class)" class="class">binary.ByteArray</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/bytestring.html" title="binary.ByteString (class)" class="class">binary.ByteString</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/encodings.html" title="encodings (namespace)" class="namespace">encodings</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../commonjs core/encodings/transcoder.html" title="encodings.Transcoder (class)" class="class">encodings.Transcoder</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/fs_base.html" title="fs_base (namespace)" class="namespace">fs_base</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/module.html" title="module (namespace)" class="namespace">module</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/require.html" title="require (namespace)" class="namespace">require</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/system.html" title="system (namespace)" class="namespace">system</a>
+              </div>
+</li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../flusspferd_core_section.html" title="Flusspferd Core section (section)" class="section">Flusspferd Core section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/flusspferd.html" title="flusspferd (namespace)" class="namespace">flusspferd</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/getopt.html" title="getopt (namespace)" class="namespace">getopt</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io.html" title="io (namespace)" class="namespace">io</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/binarystream.html" title="io.BinaryStream (class)" class="class">io.BinaryStream</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/file.html" title="io.File (class)" class="class">io.File</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/stream.html" title="io.Stream (mixin)" class="mixin">io.Stream</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/subprocess.html" title="subprocess (namespace)" class="namespace">subprocess</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/subprocess/subprocess.html" title="subprocess.Subprocess (class)" class="class">subprocess.Subprocess</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/util.html" title="util (namespace)" class="namespace">util</a>
+              </div>
+</li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../language_section.html" title="Language section (section)" class="section">Language section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../language/function.html" title="Function (namespace)" class="namespace">Function</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../language/json.html" title="JSON (namespace)" class="namespace">JSON</a>
+              </div>
+</li></ul></li>
+          
+        </ul> <!--- #api_menu =-->
+      </div> <!-- .sidebar-pane -->
+      <div class="sidebar-pane" id="search_pane">
+        <ul id="search_results" class="search-results menu-items scrollable"></ul>
+      </div> <!-- .sidebar-pane -->
+    </div> <!-- #sidebar -->
+
+
+    <div id="page">
+      <div class="masthead">
+        <div class="content">
+          <h1 class="logo">
+            Flusspferd API and module docs
+          </h1>
+        </div> <!-- .content -->
+      </div> <!-- .masthead -->
+      <div id="main" class="page-content">
+        
+        
+
+
+
+<ul class="breadcrumbs clearfix">
+  <li><a href="../../index.html">Home</a> &rarr;</li>
+  
+  <li><a href="../../bundled_modules_section.html">Bundled Modules</a> &rarr;</li>
+  
+</ul>
+
+<h2 class="page-title class">
+  <span class="type">class </span>sqlite3.SQLite3
+</h2>
+
+
+
+<div class="section section-description">
+  
+  <div class="section-title">
+    <h3>Description</h3>
+  </div> <!-- .section-title -->
+  
+  <div class="section-content">
+    <p>SQLite3 is a self-contained, single file based RDBMS. See <code><a href='../../bundled modules/sqlite3.html' title='sqlite3 (namespace)'>sqlite3</a></code> for an short example.</p>
+  </div> <!-- .section-content -->
+  
+</div> <!--.section -->
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+<div class="section section-method-list">
+  <div class="section-title">
+    <h3>Methods</h3>
+  </div> <!-- .section-title -->
+  
+  <div class="section-content">
+    <ul class="method-list">
+      
+        <li><code><a href="../../bundled modules/sqlite3/sqlite3.html#begin-instance_method" title="sqlite3.SQLite3#begin (instance method)" class="instance-method">begin</a></code></li>
+      
+        <li><code><a href="../../bundled modules/sqlite3/sqlite3.html#close-instance_method" title="sqlite3.SQLite3#close (instance method)" class="instance-method">close</a></code></li>
+      
+        <li><code><a href="../../bundled modules/sqlite3/sqlite3.html#commit-instance_method" title="sqlite3.SQLite3#commit (instance method)" class="instance-method">commit</a></code></li>
+      
+        <li><code><a href="../../bundled modules/sqlite3/sqlite3.html#exec-instance_method" title="sqlite3.SQLite3#exec (instance method)" class="instance-method">exec</a></code></li>
+      
+        <li><code><a href="../../bundled modules/sqlite3/sqlite3.html#execmany-instance_method" title="sqlite3.SQLite3#execMany (instance method)" class="instance-method">execMany</a></code></li>
+      
+        <li><code><a href="../../bundled modules/sqlite3/sqlite3.html#lastinsertid-instance_method" title="sqlite3.SQLite3#lastInsertID (instance method)" class="instance-method">lastInsertID</a></code></li>
+      
+        <li><code><a href="../../bundled modules/sqlite3/sqlite3.html#new-constructor" title="new sqlite3.SQLite3 (constructor)" class="constructor">new</a></code></li>
+      
+        <li><code><a href="../../bundled modules/sqlite3/sqlite3.html#query-instance_method" title="sqlite3.SQLite3#query (instance method)" class="instance-method">query</a></code></li>
+      
+        <li><code><a href="../../bundled modules/sqlite3/sqlite3.html#rollback-instance_method" title="sqlite3.SQLite3#rollback (instance method)" class="instance-method">rollback</a></code></li>
+      
+    </ul>
+    
+    
+    
+    
+  </div> <!-- .section-content -->
+    
+</div> <!-- .section -->
+
+
+
+<div class="section section-constructor">
+  <div class="section-title">
+    <h3>Constructor</h3>
+  </div> <!-- .section-title -->
+
+  <div class="section-content">
+    <pre id="new-constructor" class="syntax"><code>new sqlite3.SQLite3(dsn)</code></pre>
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code>dsn</code>
+            
+              (<code>String</code>)
+            
+             &ndash; Path to database file, or &#8216;:memory:&#8217;
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+    
+
+    <p><p>Opens a handle to the database <code>dsn</code>, which will usually be a filename, but could also be &#8220;:memory:&#8221;, or any other special string understood by SQLite3.</p></p>
+    
+  </div> <!-- .section-content -->
+  
+</div> <!-- .section -->
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <div class="section section-klass_properties">
+      
+      <div class="section-title">
+        <h3>Class properties</h3>        
+      </div> <!-- .section-title -->
+      
+      <div class="section-content">
+        <ul class="method-details-list">
+          <li class="method-description">
+  <h4 id="version-class_property">version
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#version-class_property">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3.version -> Number</code></pre>
+  
+  
+  
+  
+	<p>SQLite3 version as an integer. For example, SQLite v3.6.12 would have a version of 3006012</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="versionstr-class_property">versionStr
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#versionstr-class_property">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3.versionStr -> String</code></pre>
+  
+  
+  
+  
+	<p>SQLite3 library version as a human readable string</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+        </ul>    
+        
+      </div> <!-- .section-content -->
+    </div> <!-- .section -->
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="section section-instance_methods">
+      
+      <div class="section-title">
+        <h3>Instance methods</h3>        
+      </div> <!-- .section-title -->
+      
+      <div class="section-content">
+        <ul class="method-details-list">
+          <li class="method-description">
+  <h4 id="begin-instance_method">begin
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#begin-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3#begin() &rArr; undefined<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Begin a transaction. See <a href='http://www.sqlite.org/lang_transaction.html'>SQLite3 Transactions</a> for details. This method is similar to running <code>dbh.exec(&#39;BEGIN WORK&#39;)</code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="close-instance_method">close
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#close-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3#close() &rArr; undefined<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Close the database handle. Force the database handle to be closed now, instead of when the object gets garbage collected.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="commit-instance_method">commit
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#commit-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3#commit() &rArr; undefined<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Commit the current transaction.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="exec-instance_method">exec
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#exec-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3#exec(sql[, binds]) &rArr; Number<br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">sql</code>
+            
+              <span class="argument-types">(<code>String</code>)</span>
+            
+             &ndash; SQL to execute
+          </li>
+        
+          <li>
+            <code class="argument-name">binds</code>
+            
+              <span class="argument-types">(<code>Array</code> | <code>Object</code>)</span>
+            
+             &ndash; parameters to bind into <code>sql</code>
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Executes a given SQL statement and optionally, bind parameters can be passed to fill the placeholders in the SQL statement. Returns the number of rows affected by <code>sql</code></p>
+
+<p><em>Note:</em> If the execution throws an exception and the execution is aborted it will not automatically rollback the applied changes. If this is wanted the user of this function has to explicitly take care about it by using <code><a href='../../bundled modules/sqlite3/sqlite3.html#begin-instance_method' title='sqlite3.SQLite3#begin (instance method)'>sqlite3.SQLite3#begin</a></code>,<code><a href='../../bundled modules/sqlite3/sqlite3.html#commit-instance_method' title='sqlite3.SQLite3#commit (instance method)'>sqlite3.SQLite3#commit</a></code> and <code><a href='../../bundled modules/sqlite3/sqlite3.html#rollback-instance_method' title='sqlite3.SQLite3#rollback (instance method)'>sqlite3.SQLite3#rollback</a></code>.</p>
+
+<h5 id='example'>Example:</h5>
+<pre><code class='javascript'>db.exec('CREATE TABLE foobar (a,b,c)');
+db.exec('INSERT INTO foobar VALUES(?,?,?)',[1,2,3]);
+db.exec('INSERT INTO foobar VALUES(:first, :second, :third)',
+        { first: 4, second: 5, third: 6 });</code></pre>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="execmany-instance_method">execMany
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#execmany-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3#execMany(statements) &rArr; Number<br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">statements</code>
+            
+              <span class="argument-types">(<code>Array</code>)</span>
+            
+             &ndash; an Array of objects with keys <code>sql</code> and <code>bind</code>
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Executes given SQL statement(s). Bind parameters can be passed to fill placeholders used in the corresponding SQL statement.</p>
+
+<p>The parameter is expected to be an array of objects with sql and optional bind properties. The bind property should contain a value, an array or an object. The object can be used for named placeholders</p>
+
+<p><em>Note:</em> If the execution throws an exception and the execution is aborted it will not automatically rollback the applied changes. If this is wanted the user of this function has to explicitly take care about it by using SQLite3#begin,SQLite3#commit and SQLite3#rollback.</p>
+
+<h5 id='example'>Example</h5>
+<pre><code class='javascript'> db.exec([
+   { sql: 'CREATE TABLE foobar (a,b,c)'
+   },
+   { sql: 'INSERT INTO foobar VALUES(?,?,?)',
+     bind: [1,2,3]
+   },
+   { sql: 'INSERT INTO foobar VALUES(:first, :second, :third)',
+     bind: { first: 4, second: 5, third: 6 }
+   }
+ ])</code></pre>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="lastinsertid-instance_method">lastInsertID
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#lastinsertid-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3#lastInsertID() &rArr; Number<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Returns the row id of the last inserted auto-increment column.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="query-instance_method">query
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#query-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3#query(sql[, bind]) &rArr; <a href="../../bundled modules/sqlite3/sqlite3/cursor.html" title="sqlite3.SQLite3.Cursor (class)">sqlite3.SQLite3.Cursor</a><br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">sql</code>
+            
+              <span class="argument-types">(<code>String</code>)</span>
+            
+             &ndash; SQL statement to prepare
+          </li>
+        
+          <li>
+            <code class="argument-name">bind</code>
+            
+              <span class="argument-types">(<code>Object</code> | <code>Array</code>)</span>
+            
+             &ndash; bind parameters for <code>sql</code>.
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Get a cursor to execute the given SQL statement. Bind parameters can be set at cursor creqation time by passing them in as the second argument, or later by using <code><a href='../../bundled modules/sqlite3/sqlite3/cursor.html#bind-instance_method' title='sqlite3.SQLite3.Cursor#bind (instance method)'>sqlite3.SQLite3.Cursor#bind</a></code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="rollback-instance_method">rollback
+    <span class="method-permalink"><a href="../../bundled modules/sqlite3/sqlite3.html#rollback-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">sqlite3.SQLite3#rollback() &rArr; undefined<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Rollback the current transaction without writing the changes to disk.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+        </ul>    
+        
+      </div> <!-- .section-content -->
+    </div> <!-- .section -->
+  
+
+
+      </div> <!-- #main -->
+      
+      <div id="footer">
+        <div class="content clearfix">
+          
+          <div class="cc clearfix">
+            
+            <p>Most of this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">MIT License</a>. Modules are licensed under the terms set out in the module page/source.</p>
+          </div> <!-- .cc -->
+          
+          <div class="credits">
+            Generated by <a href="http://pdoc.org">PDoc</a>. Uses <a href="http://famfamfam.com/lab/icons/silk/" title="famfamfam.com: Silk Icons">Silk Icons</a> and portions of <a href="http://github.com/280north/aristo/tree/master" title="280north's aristo at master - GitHub">Aristo</a>.
+          </div> <!-- .credits -->
+          
+        </div> <!-- .content -->
+      </div> <!-- #footer -->
+
+    </div> <!-- #page -->
+  </body>
+</html>

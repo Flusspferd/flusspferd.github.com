@@ -1,0 +1,184 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">// vim: ft=cpp:foldmethod=marker:foldmarker={{{,}}}</span><span class="WHIT">
+<span class='line'>  2</span> 
+<span class='line'>  3</span> </span><span class="WHIT"> </span><span class="COMM">/**
+<span class='line'>  4</span>   * Create a new Blob. Pass either an array of integers (each one in the range
+<span class='line'>  5</span>   * [0,255]) to create a blob of those bytes, or pass a single integer to
+<span class='line'>  6</span>   * pre-allocate that many bytes to zero.
+<span class='line'>  7</span>   *
+<span class='line'>  8</span>   * @param lengthOrArray number of bytes to preallocate; or array of initial
+<span class='line'>  9</span>   * bytes.
+<span class='line'> 10</span>   *
+<span class='line'> 11</span>   * @class
+<span class='line'> 12</span>   * Binary data storage class.
+<span class='line'> 13</span>   *
+<span class='line'> 14</span>   * Javascript strings are stored as UTF8 bytes. This makes storing and
+<span class='line'> 15</span>   * processing strings in other encodings or random binary data (such as
+<span class='line'> 16</span>   * images) hard.
+<span class='line'> 17</span>   *
+<span class='line'> 18</span>   * To make this easier (and infact possible at all,) we've created the Blob
+<span class='line'> 19</span>   * class.
+<span class='line'> 20</span>   *
+<span class='line'> 21</span>   * You can treat a Blob similar to an array with its {@link #length} property
+<span class='line'> 22</span>   * and array sub-script accessors, but if you are using large blobs it is
+<span class='line'> 23</span>   * worth mentioning that each extra property you access this way requires
+<span class='line'> 24</span>   * extra memory from Spidermonkey. In this case its highly recomended you use
+<span class='line'> 25</span>   * [[#get|get]] and [[#set|set]] methods instead.
+<span class='line'> 26</span>   *
+<span class='line'> 27</span>   * @see cURL
+<span class='line'> 28</span>   *
+<span class='line'> 29</span>   * @name Blob
+<span class='line'> 30</span>   */</span><span class="WHIT">
+<span class='line'> 31</span> 
+<span class='line'> 32</span> </span><span class="COMM">// Constructor Methods {{{</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="COMM">/**#@+
+<span class='line'> 34</span>  * @methodOf Blob
+<span class='line'> 35</span>  */</span><span class="WHIT">
+<span class='line'> 36</span> 
+<span class='line'> 37</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 38</span>    * Create a blob from the UTF-8 byte sequence of str.
+<span class='line'> 39</span>    * @name fromUtf8
+<span class='line'> 40</span>    * @type Blob
+<span class='line'> 41</span>    *
+<span class='line'> 42</span>    * @param {string} str data
+<span class='line'> 43</span>    */</span><span class="WHIT">
+<span class='line'> 44</span> 
+<span class='line'> 45</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 46</span>    * Create a blob from the UTF-16 (machine specific endianness) representation
+<span class='line'> 47</span>    * of str.
+<span class='line'> 48</span>    * @name fromUtf16
+<span class='line'> 49</span>    * @type Blob
+<span class='line'> 50</span>    *
+<span class='line'> 51</span>    * @param {string} str data
+<span class='line'> 52</span>    */</span><span class="WHIT">
+<span class='line'> 53</span> 
+<span class='line'> 54</span> </span><span class="COMM">/**#@- }}} */</span><span class="WHIT">
+<span class='line'> 55</span> 
+<span class='line'> 56</span> </span><span class="COMM">// Instance Methods {{{</span><span class="WHIT">
+<span class='line'> 57</span> </span><span class="COMM">/**#@+
+<span class='line'> 58</span>  * @methodOf Blob.prototype
+<span class='line'> 59</span>  */</span><span class="WHIT">
+<span class='line'> 60</span> 
+<span class='line'> 61</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 62</span>    * Append data from another blob into this one.
+<span class='line'> 63</span>    * @name append
+<span class='line'> 64</span>    * @type Blob
+<span class='line'> 65</span>    *
+<span class='line'> 66</span>    * @param {Blob} blob blob to append to this.
+<span class='line'> 67</span>    */</span><span class="WHIT">
+<span class='line'> 68</span> 
+<span class='line'> 69</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 70</span>    * Return an Array of bytes
+<span class='line'> 71</span>    * @name toArray
+<span class='line'> 72</span>    * @type Array
+<span class='line'> 73</span>    */</span><span class="WHIT">
+<span class='line'> 74</span> 
+<span class='line'> 75</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 76</span>    * Return a new Blob instance containing a copy of the current contents.
+<span class='line'> 77</span>    * @name clone
+<span class='line'> 78</span>    * @type Blob
+<span class='line'> 79</span>    */</span><span class="WHIT">
+<span class='line'> 80</span> 
+<span class='line'> 81</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 82</span>    * Extract a portion of the data into a new Blob. Either parameter can be
+<span class='line'> 83</span>    * negative, in which case it counts backwards from
+<span class='line'> 84</span>    * the last byte:
+<span class='line'> 85</span>    *
+<span class='line'> 86</span>    * @param {int} from start index
+<span class='line'> 87</span>    * @param {int} [to] end index
+<span class='line'> 88</span>    *
+<span class='line'> 89</span>    * @name slice
+<span class='line'> 90</span>    * @type Blob
+<span class='line'> 91</span>    */</span><span class="WHIT">
+<span class='line'> 92</span> 
+<span class='line'> 93</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 94</span>    * Convert to a UTF-8 string. This method treats the bytes as a UTF-8 byte
+<span class='line'> 95</span>    * sequence.
+<span class='line'> 96</span>    *
+<span class='line'> 97</span>    * @example
+<span class='line'> 98</span>    * (new Blob([66,66])).asUtf8(); // "BB"
+<span class='line'> 99</span>    * (new Blob([66,0xC3,0xE9])).asUtf8(); // "Bé"
+<span class='line'>100</span>    * (new Blob([66,200,200])).asUtf8(); // TypeError
+<span class='line'>101</span>    *
+<span class='line'>102</span>    * @name asUtf8
+<span class='line'>103</span>    * @type string
+<span class='line'>104</span>    * @throws TypeError If the blob contains an invalid UTF-8 sequence
+<span class='line'>105</span>    */</span><span class="WHIT">
+<span class='line'>106</span> 
+<span class='line'>107</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>108</span>    * Convert to a UTF-16 string. Similar to [[#asUtf8]], but instead treat
+<span class='line'>109</span>    * the bytes as a UTF-16 byte sequence.
+<span class='line'>110</span>    *
+<span class='line'>111</span>    * &lt;br />&lt;br />
+<span class='line'>112</span>    * Since spidermonkey currently does not handle UTF-16 surrogates (i.e. any
+<span class='line'>113</span>    * characters outside of hte Basic-Multi-Lingual plane) this method shouldn't
+<span class='line'>114</span>    * throw a TypeError.
+<span class='line'>115</span>    *
+<span class='line'>116</span>    * @example
+<span class='line'>117</span>    * (new Blob([66,0,66,0]).asUtf16(); // "BB"
+<span class='line'>118</span>    * (new Blob([66,0,0xE9,0]).asUtf16(); // "Bé"
+<span class='line'>119</span>    *
+<span class='line'>120</span>    * @name asUtf16
+<span class='line'>121</span>    * @type string
+<span class='line'>122</span>    */</span><span class="WHIT">
+<span class='line'>123</span> 
+<span class='line'>124</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>125</span>    * Get a byte of data. Provided as alternative means to access data in large
+<span class='line'>126</span>    * blobs without memory bloat.
+<span class='line'>127</span>    *
+<span class='line'>128</span>    * @name get
+<span class='line'>129</span>    *
+<span class='line'>130</span>    * @param int idx byte index
+<span class='line'>131</span>    */</span><span class="WHIT">
+<span class='line'>132</span> 
+<span class='line'>133</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>134</span>    * Set a byte of data. idx must be less than the current [[#length]]
+<span class='line'>135</span>    *
+<span class='line'>136</span>    * @name set
+<span class='line'>137</span> 
+<span class='line'>138</span>    * @param int idx byte index
+<span class='line'>139</span>    */</span><span class="WHIT">
+<span class='line'>140</span> 
+<span class='line'>141</span> </span><span class="COMM">/**#@- }}}*/</span><span class="WHIT">
+<span class='line'>142</span> 
+<span class='line'>143</span> </span><span class="COMM">// Instance properties {{{</span><span class="WHIT">
+<span class='line'>144</span> </span><span class="COMM">/**#@+
+<span class='line'>145</span>  * @fieldOf Blob.prototype
+<span class='line'>146</span>  */</span><span class="WHIT">
+<span class='line'>147</span> 
+<span class='line'>148</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>149</span>    * Array like access. Cannot change the length of the blob.
+<span class='line'>150</span>    * @name []
+<span class='line'>151</span>    */</span><span class="WHIT">
+<span class='line'>152</span> 
+<span class='line'>153</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>154</span>    * Length of the blob in bytes. Setting this value will resize the blob, with
+<span class='line'>155</span>    * new entries initalized to 0.
+<span class='line'>156</span>    *
+<span class='line'>157</span>    * @name length
+<span class='line'>158</span>    */</span><span class="WHIT">
+<span class='line'>159</span> 
+<span class='line'>160</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>161</span>    * Iterator that returns values instead of array indicies.
+<span class='line'>162</span>    *
+<span class='line'>163</span>    * @example for (var byte in blob.values) { ... }
+<span class='line'>164</span>    *
+<span class='line'>165</span>    * @name values
+<span class='line'>166</span>    */</span><span class="WHIT">
+<span class='line'>167</span> 
+<span class='line'>168</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>169</span>    * Iterator that returns [index,byte] pairs.
+<span class='line'>170</span>    *
+<span class='line'>171</span>    * @example for (var [idx,byte] in blob.pairs) { ... }
+<span class='line'>172</span>    *
+<span class='line'>173</span>    * @name pairs
+<span class='line'>174</span>    */</span><span class="WHIT">
+<span class='line'>175</span> 
+<span class='line'>176</span> </span><span class="COMM">/**#@- }}} /
+<span class='line'>177</span> </span></pre></body></html>

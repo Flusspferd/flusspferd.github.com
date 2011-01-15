@@ -1,0 +1,889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Flusspferd JS Reference - io.Stream</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="index.html">Class Index</a>
+| <a href="files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="_global_">_global_</a></i></li>
+	
+	<li><a href="Array">Array</a></li>
+	
+	<li><a href="Function">Function</a></li>
+	
+	<li><a href="gmp">gmp</a></li>
+	
+	<li><a href="gmp.Float">gmp.Float</a></li>
+	
+	<li><a href="gmp.Integer">gmp.Integer</a></li>
+	
+	<li><a href="gmp.Rational">gmp.Rational</a></li>
+	
+	<li><a href="io">io</a></li>
+	
+	<li><a href="io.BinaryStream">io.BinaryStream</a></li>
+	
+	<li><a href="io.File">io.File</a></li>
+	
+	<li><a href="io.Stream">io.Stream</a></li>
+	
+	<li><a href="Object">Object</a></li>
+	
+	<li><a href="require">require</a></li>
+	
+	<li><a href="SQLite3">SQLite3</a></li>
+	
+	<li><a href="SQLite3.Cursor">SQLite3.Cursor</a></li>
+	
+	<li><a href="String">String</a></li>
+	
+	<li><a href="Util.Range">Util.Range</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Class io.Stream
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<div class="description">
+				
+			
+				<p>Interface for all io streams to follow</p>
+
+				
+				
+					<br /><i>Defined in: </i> <a href="src/src_io_io.jsdoc.html">src/io/io.jsdoc</a>.
+				
+			</div>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class io.Stream.">
+				<caption>Class Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="io.Stream">io.Stream</a></b>()
+							</div>
+							<div class="description"><p>Not actually a class, but an interface</p>
+</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class io.Stream.">
+					<caption>Field Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Field Attributes</th>
+							<th scope="col">Field Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								<b><a href="io.Stream#fieldSeperator">fieldSeperator</a></b>
+								</div>
+								<div class="description"><p>Printed between every argument to <a href="#print">#print</a>.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								<b><a href="io.Stream#recordSeparator">recordSeparator</a></b>
+								</div>
+								<div class="description"><p>Printed at the end of each <a href="#print">#print</a> call.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								<b><a href="io.Stream#autoFlush">autoFlush</a></b>
+								</div>
+								<div class="description"><p>Call flush after every write.</p>
+</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class io.Stream.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="io.Stream#read">read</a></b>(size)
+								</div>
+								<div class="description"><p>Read UTF-8 data.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="io.Stream#readBinary">readBinary</a></b>(size, output)
+								</div>
+								<div class="description"><p>Read binary data</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="io.Stream#readLine">readLine</a></b>(separator)
+								</div>
+								<div class="description"><p>Read a line from the stream</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="io.Stream#readWhole">readWhole</a></b>()
+								</div>
+								<div class="description"><p>Read entire stream as UTF-8 string</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="io.Stream#readWholeBinary">readWholeBinary</a></b>(output)
+								</div>
+								<div class="description"><p>Read entire stream contents as binary data.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="io.Stream#write">write</a></b>(data)
+								</div>
+								<div class="description"><p>Write either a string, in which case the UTF-8 byte sequence is
+written, or else a Binary where the raw binary data is written.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="io.Stream#flush">flush</a></b>()
+								</div>
+								<div class="description"><p>Flush internal/OS buffers.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="io.Stream#print">print</a></b>()
+								</div>
+								<div class="description"><p>Print strings to this stream.</p>
+</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Class Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>io.Stream</b>()
+				</div>
+				
+				<div class="description">
+					<p>Not actually a class, but an interface</p>
+
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+				<div class="sectionTitle">
+					Field Detail
+				</div>
+				
+					<a name="fieldSeperator"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string}</span>
+					<b>fieldSeperator</b>
+					
+					</div>
+					<div class="description">
+						<p>Printed between every argument to <a href="#print">#print</a>.</p>
+
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Default Value:</dt>
+							<dd>
+								<p>" "</p>
+
+							</dd>
+							</dl>
+						
+
+					<hr />
+				
+					<a name="recordSeparator"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string}</span>
+					<b>recordSeparator</b>
+					
+					</div>
+					<div class="description">
+						<p>Printed at the end of each <a href="#print">#print</a> call.</p>
+
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Default Value:</dt>
+							<dd>
+								<p>"\n"</p>
+
+							</dd>
+							</dl>
+						
+
+					<hr />
+				
+					<a name="autoFlush"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{boolean}</span>
+					<b>autoFlush</b>
+					
+					</div>
+					<div class="description">
+						<p>Call flush after every write.</p>
+
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Default Value:</dt>
+							<dd>
+								<p>false</p>
+
+							</dd>
+							</dl>
+						
+
+					
+				
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name="read"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string}</span>
+					<b>read</b>(size)
+					
+					</div>
+					<div class="description">
+						<p>Read UTF-8 data. If the stream contains an invalid UTF-8 bye sequence, an
+exception will be thrown.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>size</b>
+									<i>Optional, Default: 4096</i>
+								</dt>
+								<dd><p>number of bytes to read.</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="readBinary"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{Binary}</span>
+					<b>readBinary</b>(size, output)
+					
+					</div>
+					<div class="description">
+						<p>Read binary data</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>size</b>
+									<i>Optional, Default: 4096</i>
+								</dt>
+								<dd><p>number of bytes to read.</p>
+</dd>
+							
+								<dt>
+									<span class="light fixedFont">{ByteArray}</span> <b>output</b>
+									<i>Optional</i>
+								</dt>
+								<dd><p>If defined/non-null, the output data will be appended to this ByteArray. Otherwise, a new ByteString will be created.</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="readLine"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string}</span>
+					<b>readLine</b>(separator)
+					
+					</div>
+					<div class="description">
+						<p>Read a line from the stream</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>separator</b>
+									<i>Optional, Default: "\n"</i>
+								</dt>
+								<dd><p>The line separator to use.  Must be a single ASCII
+                        character currently.</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="readWhole"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string}</span>
+					<b>readWhole</b>()
+					
+					</div>
+					<div class="description">
+						<p>Read entire stream as UTF-8 string</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="readWholeBinary"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{Binary}</span>
+					<b>readWholeBinary</b>(output)
+					
+					</div>
+					<div class="description">
+						<p>Read entire stream contents as binary data.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{ByteArray}</span> <b>output</b>
+									<i>Optional</i>
+								</dt>
+								<dd><p>If defined/non-null, the output data will be appended to this ByteArray. Otherwise, a new ByteString will be created.</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="write"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>write</b>(data)
+					
+					</div>
+					<div class="description">
+						<p>Write either a string, in which case the UTF-8 byte sequence is
+written, or else a Binary where the raw binary data is written.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>data</b>
+									
+								</dt>
+								<dd><p>stringOrBinary</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="flush"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>flush</b>()
+					
+					</div>
+					<div class="description">
+						<p>Flush internal/OS buffers.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="print"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>print</b>()
+					
+					</div>
+					<div class="description">
+						<p>Print strings to this stream. This method converts each argument passed to
+a string, writes them to the string with <a href="#fieldSeperator">#fieldSeperator</a> between
+each one and <a href="#recordSeparator">#recordSeparator</a> after the last one.</p>
+<p><br /><br /></p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>...</b>
+									
+								</dt>
+								<dd><p>values to print</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.1.0 on Mon Oct 26 2009 08:51:33 GMT-0000 (UTC)
+		</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7744305-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+	</body>
+</html>

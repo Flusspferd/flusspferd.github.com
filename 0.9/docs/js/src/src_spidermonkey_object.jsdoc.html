@@ -1,0 +1,92 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">// vim: ft=javascript:foldmethod=marker:foldmarker={{{,}}}</span><span class="WHIT">
+<span class='line'>  2</span> </span><span class="COMM">/**
+<span class='line'>  3</span>  * @name Object
+<span class='line'>  4</span>  * @class Extensions to built in Object class.
+<span class='line'>  5</span>  */</span><span class="WHIT">
+<span class='line'>  6</span> 
+<span class='line'>  7</span> 
+<span class='line'>  8</span> </span><span class="COMM">/**
+<span class='line'>  9</span>  * Define a property on an object with flags. This allows you to create
+<span class='line'> 10</span>  * read-only or non-enumerable properties on your javascript objects.
+<span class='line'> 11</span>  * @name defineProperty
+<span class='line'> 12</span>  * @methodOf Object
+<span class='line'> 13</span>  *
+<span class='line'> 14</span>  * @param obj Object on which to define the property
+<span class='line'> 15</span>  * @param name property name
+<span class='line'> 16</span>  * @param description Property descriptor.
+<span class='line'> 17</span>  *
+<span class='line'> 18</span>  * A property descriptor is an object with some of the following keys
+<span class='line'> 19</span>  *
+<span class='line'> 20</span>  * * enumerable - is the property visible in `for in` loops
+<span class='line'> 21</span>  * * configurable - can further changes be made to this property
+<span class='line'> 22</span>  * * writable - read only property
+<span class='line'> 23</span>  * * value - initial property value
+<span class='line'> 24</span>  * * getter - getter function
+<span class='line'> 25</span>  * * setter - setter function
+<span class='line'> 26</span>  *
+<span class='line'> 27</span>  * All values default to false or undefined. If either writable or value exist
+<span class='line'> 28</span>  * then neither getter nor setter are allowed. 
+<span class='line'> 29</span>  *
+<span class='line'> 30</span>  * A getter function is one which is called and should return the current value
+<span class='line'> 31</span>  * of the property. A setter is called with the argument to set the property
+<span class='line'> 32</span>  * too, but you can set it do a derivative of that value, or ignore it
+<span class='line'> 33</span>  * completly. Both getter and setter are called with "this" set to the object
+<span class='line'> 34</span>  * in question.
+<span class='line'> 35</span>  *
+<span class='line'> 36</span>  * {{{
+<span class='line'> 37</span>  * function MyObj() {
+<span class='line'> 38</span>  *   var prop = 0;
+<span class='line'> 39</span>  *   Object.defineProperty(
+<span class='line'> 40</span>  *     myobj, 
+<span class='line'> 41</span>  *     "prop",
+<span class='line'> 42</span>  *     { getter: function() { return prop },
+<span class='line'> 43</span>  *       setter: function(x) { prop = x * 2; return prop; },
+<span class='line'> 44</span>  *       enumerable: false,
+<span class='line'> 45</span>  *       configurable: true
+<span class='line'> 46</span>  *     }
+<span class='line'> 47</span>  *   );
+<span class='line'> 48</span>  * }
+<span class='line'> 49</span>  * }}}
+<span class='line'> 50</span>  * 
+<span class='line'> 51</span>  * If configurable is false, then any further attempts to call
+<span class='line'> 52</span>  * [[#defineProperty]] on that property will result in an exception.  
+<span class='line'> 53</span>  */</span><span class="WHIT">
+<span class='line'> 54</span> 
+<span class='line'> 55</span> </span><span class="COMM">/**
+<span class='line'> 56</span>  * Define multiple properties on an object.
+<span class='line'> 57</span>  *
+<span class='line'> 58</span>  * @name defineProperties
+<span class='line'> 59</span>  * @methodOf Object
+<span class='line'> 60</span>  *
+<span class='line'> 61</span>  * This the same as to calling `Object.defineProperty` multiple times. For
+<span class='line'> 62</span>  * example:
+<span class='line'> 63</span>  *
+<span class='line'> 64</span>  * {{{
+<span class='line'> 65</span>  * Object.defineProperties(obj, {
+<span class='line'> 66</span>  *   prop1: { value: 1, enumerable: true, configurable: true },
+<span class='line'> 67</span>  *   prop2: { value: 2, enumerable: true, configurable: true },
+<span class='line'> 68</span>  * })
+<span class='line'> 69</span>  * }}}
+<span class='line'> 70</span>  *
+<span class='line'> 71</span>  * behaves the same as just doing
+<span class='line'> 72</span> 
+<span class='line'> 73</span>  * {{{
+<span class='line'> 74</span>  * Object.defineProperty(obj, "prop1",
+<span class='line'> 75</span>  *   { value: 1, enumerable: true, configurable: true }
+<span class='line'> 76</span>  * );
+<span class='line'> 77</span>  * Object.defineProperty(obj, "prop2",
+<span class='line'> 78</span>  *   { value: 2, enumerable: true, configurable: true },
+<span class='line'> 79</span>  * )
+<span class='line'> 80</span>  * }}}
+<span class='line'> 81</span>  *
+<span class='line'> 82</span>  * @param obj Object on which to define the property
+<span class='line'> 83</span>  * @param dict dictionary of properties to add to the object
+<span class='line'> 84</span>  */</span><span class="WHIT">
+<span class='line'> 85</span> </span></pre></body></html>

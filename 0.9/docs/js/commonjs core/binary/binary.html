@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>HippoDoc | binary.Binary mixin</title>
+  <meta name="generator" content="PDoc" />
+  
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/prototype.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/application.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../javascripts/code_highlighter.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../javascripts/tabs.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/item_index.js"></script>
+  	  
+  <link type="text/css" href="../../stylesheets/api.css" media="screen, projection" charset="utf-8" rel="stylesheet" />
+  
+  <script type="text/javascript">
+    PDoc.pathPrefix = '../../';
+  </script>
+</head>
+  <body>
+
+    <div id="sidebar">
+      <ul id="sidebar_tabs" class="sidebar-tabs">
+        <li>
+          <a href="#menu_pane">Menu</a>
+        </li>
+        <li>
+          <a href="#search_pane">Search</a>
+        </li>
+      </ul> <!-- .sidebar-tabs -->
+
+      <form class="search-ribbon">
+        <label>
+          <span class="hidden">Search</span>
+          <input type="text" id="search" size="20" title="Search" />
+        </label>
+      </form>
+      
+      <div class="sidebar-pane scrollable" id="menu_pane">
+        <ul id="api_menu" class="menu-items">
+          
+            <li>              <div class='menu-item'>
+                <a href="../../bundled_modules_section.html" title="Bundled Modules section (section)" class="section">Bundled Modules section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../bundled modules/curl.html" title="cURL (namespace)" class="namespace">cURL</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/curl/easy.html" title="cURL.Easy (class)" class="class">cURL.Easy</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp.html" title="gmp (namespace)" class="namespace">gmp</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)" class="mixin">gmp.Base</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/float.html" title="gmp.Float (class)" class="class">gmp.Float</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/integer.html" title="gmp.Integer (class)" class="class">gmp.Integer</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/rational.html" title="gmp.Rational (class)" class="class">gmp.Rational</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3.html" title="sqlite3 (namespace)" class="namespace">sqlite3</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3.html" title="sqlite3.SQLite3 (class)" class="class">sqlite3.SQLite3</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3/cursor.html" title="sqlite3.SQLite3.Cursor (class)" class="class">sqlite3.SQLite3.Cursor</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3/cursor.html" title="sqlite3.SQLite3.Cursor (class)" class="class">sqlite3.SQLite3.Cursor</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml.html" title="xml (namespace)" class="namespace">xml</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/domimplementation.html" title="xml.DOMImplementation (class)" class="class">xml.DOMImplementation</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/htmlparser.html" title="xml.HTMLParser (class)" class="class">xml.HTMLParser</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/xmlparser.html" title="xml.XMLParser (class)" class="class">xml.XMLParser</a>
+              </div>
+</li></ul></li></ul></li>
+          
+            <li class="current-parent">              <div class='menu-item'>
+                <a href="../../commonjs_core_section.html" title="CommonJS Core section (section)" class="section">CommonJS Core section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../commonjs core/dollarrequire.html" title="$require (utility)" class="utility">$require</a>
+              </div>
+</li>
+<li class="current-parent">              <div class='menu-item'>
+                <a href="../../commonjs core/binary.html" title="binary (namespace)" class="namespace">binary</a>
+              </div>
+<ul class=""><li class="current">              <div class='menu-item'>
+                <a href="../../commonjs core/binary/binary.html" title="binary.Binary (mixin)" class="mixin">binary.Binary</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/bytearray.html" title="binary.ByteArray (class)" class="class">binary.ByteArray</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/bytestring.html" title="binary.ByteString (class)" class="class">binary.ByteString</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/encodings.html" title="encodings (namespace)" class="namespace">encodings</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../commonjs core/encodings/transcoder.html" title="encodings.Transcoder (class)" class="class">encodings.Transcoder</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/fs_base.html" title="fs_base (namespace)" class="namespace">fs_base</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/module.html" title="module (namespace)" class="namespace">module</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/require.html" title="require (namespace)" class="namespace">require</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/system.html" title="system (namespace)" class="namespace">system</a>
+              </div>
+</li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../flusspferd_core_section.html" title="Flusspferd Core section (section)" class="section">Flusspferd Core section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/flusspferd.html" title="flusspferd (namespace)" class="namespace">flusspferd</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/getopt.html" title="getopt (namespace)" class="namespace">getopt</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io.html" title="io (namespace)" class="namespace">io</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/binarystream.html" title="io.BinaryStream (class)" class="class">io.BinaryStream</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/file.html" title="io.File (class)" class="class">io.File</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/stream.html" title="io.Stream (mixin)" class="mixin">io.Stream</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/subprocess.html" title="subprocess (namespace)" class="namespace">subprocess</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/subprocess/subprocess.html" title="subprocess.Subprocess (class)" class="class">subprocess.Subprocess</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/util.html" title="util (namespace)" class="namespace">util</a>
+              </div>
+</li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../language_section.html" title="Language section (section)" class="section">Language section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../language/function.html" title="Function (namespace)" class="namespace">Function</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../language/json.html" title="JSON (namespace)" class="namespace">JSON</a>
+              </div>
+</li></ul></li>
+          
+        </ul> <!--- #api_menu =-->
+      </div> <!-- .sidebar-pane -->
+      <div class="sidebar-pane" id="search_pane">
+        <ul id="search_results" class="search-results menu-items scrollable"></ul>
+      </div> <!-- .sidebar-pane -->
+    </div> <!-- #sidebar -->
+
+
+    <div id="page">
+      <div class="masthead">
+        <div class="content">
+          <h1 class="logo">
+            Flusspferd API and module docs
+          </h1>
+        </div> <!-- .content -->
+      </div> <!-- .masthead -->
+      <div id="main" class="page-content">
+        
+        
+
+
+
+<ul class="breadcrumbs clearfix">
+  <li><a href="../../index.html">Home</a> &rarr;</li>
+  
+  <li><a href="../../commonjs_core_section.html">CommonJS Core</a> &rarr;</li>
+  
+</ul>
+
+<h2 class="page-title mixin">
+  <span class="type">mixin </span>binary.Binary
+</h2>
+
+
+
+<div class="section section-description">
+  
+  <div class="section-title">
+    <h3>Description</h3>
+  </div> <!-- .section-title -->
+  
+  <div class="section-content">
+    <p>Shared behaviour between <a href='../../commonjs core/binary/bytearray.html'>ByteArrays</a> and <a href='../../commonjs core/binary/bytestring.html'>ByteStrings</a>.</p>
+
+<p>In Flusspferd, Binary is a class in its own right &#8211; albeit one that you can&#8217;t constrauct from directly form javascript &#8211; which is in the prototype chain of which both ByteArrays and ByteStrings.</p>
+
+<p>Please note however that this is an extension to the CommonJS spec, so if you rely in this behaviour your code will become non-portable.</p>
+
+<h3 id='a_note_on_range_arguments'>A note on range arguments</h3>
+
+<p>A number of methods accept on blobs accept ranges, either in the form <code>start, end</code> (<a href='../../commonjs core/binary/binary.html#slice-instance_method'>slice</a>) or <code>start, length</code> (<code><a href='../../commonjs core/binary/bytestring.html#substr-instance_method' title='binary.ByteString#substr (instance method)'>binary.ByteString#substr</a></code> or <code><a href='../../commonjs core/binary/bytearray.html#splice-instance_method' title='binary.ByteArray#splice (instance method)'>binary.ByteArray#splice</a></code>). Most of these parameters behave predictably, but it is worth noting that any of the values of a range can be negative, in which case it counts backwards from the end. See <code><a href='../../commonjs core/binary/binary.html#range-class_method' title='binary.Binary.range (class method)'>binary.Binary.range</a></code> and <code><a href='../../commonjs core/binary/binary.html#lengthrange-class_method' title='binary.Binary.lengthRange (class method)'>binary.Binary.lengthRange</a></code> for more details.</p>
+  </div> <!-- .section-content -->
+  
+</div> <!--.section -->
+
+
+
+
+
+
+
+
+
+<div class="section section-method-list">
+  <div class="section-title">
+    <h3>Methods</h3>
+  </div> <!-- .section-title -->
+  
+  <div class="section-content">
+    <ul class="method-list">
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#byteat-instance_method" title="binary.Binary#byteAt (instance method)" class="instance-method">byteAt</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#charat-instance_method" title="binary.Binary#charAt (instance method)" class="instance-method">charAt</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#concat-instance_method" title="binary.Binary#concat (instance method)" class="instance-method">concat</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#decodetostring-instance_method" title="binary.Binary#decodeToString (instance method)" class="instance-method">decodeToString</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#get-instance_method" title="binary.Binary#get (instance method)" class="instance-method">get</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#indexof-instance_method" title="binary.Binary#indexOf (instance method)" class="instance-method">indexOf</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#lastindexof-instance_method" title="binary.Binary#lastIndexOf (instance method)" class="instance-method">lastIndexOf</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#lengthrange-class_method" title="binary.Binary.lengthRange (class method)" class="class-method">lengthRange</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#range-class_method" title="binary.Binary.range (class method)" class="class-method">range</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#slice-instance_method" title="binary.Binary#slice (instance method)" class="instance-method">slice</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#split-instance_method" title="binary.Binary#split (instance method)" class="instance-method">split</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#toarray-instance_method" title="binary.Binary#toArray (instance method)" class="instance-method">toArray</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#tobytearray-instance_method" title="binary.Binary#toByteArray (instance method)" class="instance-method">toByteArray</a></code></li>
+      
+        <li><code><a href="../../commonjs core/binary/binary.html#tobytestring-instance_method" title="binary.Binary#toByteString (instance method)" class="instance-method">toByteString</a></code></li>
+      
+    </ul>
+    
+    
+    
+    
+  </div> <!-- .section-content -->
+    
+</div> <!-- .section -->
+
+
+
+
+
+
+
+
+  
+  
+    <div class="section section-klass_methods">
+      
+      <div class="section-title">
+        <h3>Class methods</h3>        
+      </div> <!-- .section-title -->
+      
+      <div class="section-content">
+        <ul class="method-details-list">
+          <li class="method-description">
+  <h4 id="lengthrange-class_method">lengthRange
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#lengthrange-class_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary.lengthRange(start[, howMany]) &rArr; [Number,Number]<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p><strong>Note</strong>: This is not an actual callable method, it just describes behaviour.</p>
+
+<p>A range of <code>howMany</code> bytes starting at position <code>start</code>.</p>
+
+<p><code>start</code> can be negative, in which case it counts backwards from the end of the blob. <code>howMany</code> cannot be negative, and will never overflow past the end of the blob.</p>
+
+<p>For example, given a blob which is 10 bytes long, all the following ranges are the same, bytes 3,4 and 5:</p>
+<pre><code class='javascript'>3,3
+-7,3</code></pre>
+<p>This is how Array#splice and String#substr behaves.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="range-class_method">range
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#range-class_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary.range(start[, end]) &rArr; [Number,Number]<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p><strong>Note</strong>: This is not an actual callable method, it just describes behaviour.</p>
+
+<p>Bytes ranging from [<code>start</code>,<code>end</code>) (start is included, end is excluded). If end is not provided, range from <code>start</code> to the end of the blob.</p>
+
+<p>Either <code>start</code> or <code>end</code> can be negative, in which case they count backwards from the end of the blob. For example, given a blob which is 10 bytes long, all the following ranges are the same, bytes 3,4 and 5:</p>
+<pre><code class='javascript'>3,6
+3,-4
+-7,6
+-7,-4</code></pre>
+<p>If <code>end</code> is less than <code>start</code> (after both values have been corrected for being negative and clamped to the length of the blob) then <code>end</code> is set to <code>start</code>, meaning a range that covers 0 bytes is created.</p>
+
+<p>This described behaviour is how Array#slice behaves. String#substring behaves simiarly except for negative values.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+        </ul>    
+        
+      </div> <!-- .section-content -->
+    </div> <!-- .section -->
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="section section-instance_methods">
+      
+      <div class="section-title">
+        <h3>Instance methods</h3>        
+      </div> <!-- .section-title -->
+      
+      <div class="section-content">
+        <ul class="method-details-list">
+          <li class="method-description">
+  <h4 id="byteat-instance_method">byteAt
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#byteat-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#byteAt(index) &rArr; <a href="../../commonjs core/binary/bytestring.html" title="binary.ByteString (class)">binary.ByteString</a><br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">index</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; byte to get
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Get the byte at the specified index as a ByteString. To get the actual byte value, use <a href='../../commonjs core/binary/binary.html#get-instance_method'><code>get(index)</code></a>.</p>
+
+<p>Currently CommonJS has speced this to return a ByteString of length one, but this might well change in a future version of the spec.</p>
+  
+    
+    <p class="alias aliases">Aliased as: <code><a href="../../commonjs core/binary/binary.html#charat-instance_method" title="binary.Binary#charAt (instance method)">binary.Binary#charAt</a></code></p>
+  
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="charat-instance_method">charAt
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#charat-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#charAt(index) &rArr; <a href="../../commonjs core/binary/bytestring.html" title="binary.ByteString (class)">binary.ByteString</a><br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">index</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; byte to get
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Provided for compatibility with String. Return a ByteString of length one for the given index. Will throw a RangeError if <code>index</code> is not valid.</p>
+  
+    
+  
+    
+    <p class="alias alias-of">Alias of: <code><a href="../../commonjs core/binary/binary.html#byteat-instance_method" title="binary.Binary#byteAt (instance method)">binary.Binary#byteAt</a></code></p>
+  
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="concat-instance_method">concat
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#concat-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#concat(args...) &rArr; <a href="../../commonjs core/binary/binary.html" title="binary.Binary (mixin)">binary.Binary</a><br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">args</code>
+            
+              <span class="argument-types">(<code><a href="../../commonjs core/binary/binary.html" title="binary.Binary (mixin)">binary.Binary</a></code> | <code>Byte</code> | <code>Array</code>)</span>
+            
+             &ndash; blobs to concatenate
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Concatenate together this blob and the provided arguments into a new blob of the same type as the invocant.</p>
+
+<p>Each argument must be a Byte, an Array of Bytes or another blob.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="decodetostring-instance_method">decodeToString
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#decodetostring-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#decodeToString([charset="UTF-8"]) &rArr; String<br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">charset</code>
+            
+              <span class="argument-types">(<code>String</code>)</span>
+            
+             &ndash; character set to interpret invocant as.
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Decode the blob to a string of characters by using the <code><a href='../../commonjs core/encodings.html' title='encodings (namespace)'>encodings</a></code> module.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="get-instance_method">get
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#get-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#get(index) &rArr; Byte<br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">index</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; byte to get
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Return the actualy byte value at <code>index</code> &#8211; i.e. a Number between 0 and 255. Can throw a RangeError.</p>
+  
+    
+    <p class="alias aliases">Aliased as: <code><a href="../../commonjs core/binary/bytestring.html#charcodeat-instance_method" title="binary.ByteString#charCodeAt (instance method)">binary.ByteString#charCodeAt</a></code></p>
+  
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="indexof-instance_method">indexOf
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#indexof-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#indexOf(byte[, start=0 [, stop]]) &rArr; Array<br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">byte</code>
+            
+              <span class="argument-types">(<code>Byte</code>)</span>
+            
+             &ndash; byte to search for
+          </li>
+        
+          <li>
+            <code class="argument-name">start</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; Start of range to search for <code>byte</code> in. Default 0
+          </li>
+        
+          <li>
+            <code class="argument-name">stop</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; End of range.
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Return the index of the first occurance of <code>byte</code> or -1 if it cannot be found.</p>
+
+<p>[<code>start</code>,<code>stop</code>) form a <code><a href='../../commonjs core/binary/binary.html#range-class_method' title='binary.Binary.range (class method)'>binary.Binary.range</a></code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="lastindexof-instance_method">lastIndexOf
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#lastindexof-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#lastIndexOf(byte[, start=0 [, stop]]) &rArr; Array<br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">byte</code>
+            
+              <span class="argument-types">(<code>Byte</code>)</span>
+            
+             &ndash; byte to search for
+          </li>
+        
+          <li>
+            <code class="argument-name">start</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; Index to start searching for <code>byte</code>.
+          </li>
+        
+          <li>
+            <code class="argument-name">stop</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; Index to stop searching at. Defaults to last byte the blob
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Return the index of the lat occurance of <code>byte</code> in the specified range, or -1 if it cannot be found.</p>
+
+<p>[<code>start</code>,<code>stop</code>) form a <code><a href='../../commonjs core/binary/binary.html#range-class_method' title='binary.Binary.range (class method)'>binary.Binary.range</a></code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="slice-instance_method">slice
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#slice-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#slice(start[, end]) &rArr; <a href="../../commonjs core/binary/binary.html" title="binary.Binary (mixin)">binary.Binary</a><br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">start</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; start index
+          </li>
+        
+          <li>
+            <code class="argument-name">end</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; end index. Defaults to end of blob
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Return a slice of the blob containing the <a href='../../commonjs core/binary/binary.html#range-class_method'>range</a> [<code>start</code>, <code>end</code>).</p>
+
+<p>The returned blob is of the same type as the invocant, i.e. a ByteString when called on a ByteString.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="split-instance_method">split
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#split-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#split(delim[, options]) &rArr; [<a href="../../commonjs core/binary.html" title="binary (namespace)">binary</a>.Binary…]<br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">delim</code>
+            
+              <span class="argument-types">(<code>Byte</code> | <code>Array</code> | <code><a href="../../commonjs core/binary/binary.html" title="binary.Binary (mixin)">binary.Binary</a></code>)</span>
+            
+             &ndash; Byte value to split on
+          </li>
+        
+          <li>
+            <code class="argument-name">options</code>
+            
+              <span class="argument-types">(<code>Object</code>)</span>
+            
+             &ndash; options dictionary.
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Split the blob into an array of blobs (of the same type as the invocant) about on a set of (single byte) delimiters. If <code>delim</code> is an array, each element must be something accepted by the <code><a href='../../commonjs core/binary/bytestring.html' title='binary.ByteString (class)'>binary.ByteString</a></code> constructor.</p>
+
+<p>The behaviour of this function can be tweaked by the following keys in the <code>options</code> dictionary argument:</p>
+
+<ul>
+<li><code>count</code> (Number): Maximum number of elements in the return array. If count is 1 you will get an array containg just a copy of this blob.</li>
+
+<li><code>includeDelimiter</code> (Boolean): should the matched delimiter be added as an element in the return array</li>
+</ul>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="toarray-instance_method">toArray
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#toarray-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#toArray() &rArr; Array<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Return an array containing the contents of this blob as an array of bytes (Numbers).</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="tobytearray-instance_method">toByteArray
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#tobytearray-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#toByteArray() &rArr; <a href="../../commonjs core/binary/bytearray.html" title="binary.ByteArray (class)">binary.ByteArray</a><br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Create a new copy of this blob as a mutable ByteArray. If it is already a ByteArray, a new copy will be created.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="tobytestring-instance_method">toByteString
+    <span class="method-permalink"><a href="../../commonjs core/binary/binary.html#tobytestring-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">binary.Binary#toByteString() &rArr; binary.ByteString.<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Coerce the blob into a ByteString. If it is already one it will be returned directly as ByteStrings are immutable.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+        </ul>    
+        
+      </div> <!-- .section-content -->
+    </div> <!-- .section -->
+  
+
+
+      </div> <!-- #main -->
+      
+      <div id="footer">
+        <div class="content clearfix">
+          
+          <div class="cc clearfix">
+            
+            <p>Most of this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">MIT License</a>. Modules are licensed under the terms set out in the module page/source.</p>
+          </div> <!-- .cc -->
+          
+          <div class="credits">
+            Generated by <a href="http://pdoc.org">PDoc</a>. Uses <a href="http://famfamfam.com/lab/icons/silk/" title="famfamfam.com: Silk Icons">Silk Icons</a> and portions of <a href="http://github.com/280north/aristo/tree/master" title="280north's aristo at master - GitHub">Aristo</a>.
+          </div> <!-- .credits -->
+          
+        </div> <!-- .content -->
+      </div> <!-- #footer -->
+
+    </div> <!-- #page -->
+  </body>
+</html>

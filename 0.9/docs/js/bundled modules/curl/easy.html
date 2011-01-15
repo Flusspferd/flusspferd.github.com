@@ -1,0 +1,1144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>HippoDoc | cURL.Easy class</title>
+  <meta name="generator" content="PDoc" />
+  
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/prototype.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/application.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../javascripts/code_highlighter.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../javascripts/tabs.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/item_index.js"></script>
+  	  
+  <link type="text/css" href="../../stylesheets/api.css" media="screen, projection" charset="utf-8" rel="stylesheet" />
+  
+  <script type="text/javascript">
+    PDoc.pathPrefix = '../../';
+  </script>
+</head>
+  <body>
+
+    <div id="sidebar">
+      <ul id="sidebar_tabs" class="sidebar-tabs">
+        <li>
+          <a href="#menu_pane">Menu</a>
+        </li>
+        <li>
+          <a href="#search_pane">Search</a>
+        </li>
+      </ul> <!-- .sidebar-tabs -->
+
+      <form class="search-ribbon">
+        <label>
+          <span class="hidden">Search</span>
+          <input type="text" id="search" size="20" title="Search" />
+        </label>
+      </form>
+      
+      <div class="sidebar-pane scrollable" id="menu_pane">
+        <ul id="api_menu" class="menu-items">
+          
+            <li class="current-parent">              <div class='menu-item'>
+                <a href="../../bundled_modules_section.html" title="Bundled Modules section (section)" class="section">Bundled Modules section</a>
+              </div>
+<ul class="menu-section"><li class="current-parent">              <div class='menu-item'>
+                <a href="../../bundled modules/curl.html" title="cURL (namespace)" class="namespace">cURL</a>
+              </div>
+<ul class=""><li class="current">              <div class='menu-item'>
+                <a href="../../bundled modules/curl/easy.html" title="cURL.Easy (class)" class="class">cURL.Easy</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp.html" title="gmp (namespace)" class="namespace">gmp</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)" class="mixin">gmp.Base</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/float.html" title="gmp.Float (class)" class="class">gmp.Float</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/integer.html" title="gmp.Integer (class)" class="class">gmp.Integer</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/rational.html" title="gmp.Rational (class)" class="class">gmp.Rational</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3.html" title="sqlite3 (namespace)" class="namespace">sqlite3</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3.html" title="sqlite3.SQLite3 (class)" class="class">sqlite3.SQLite3</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3/cursor.html" title="sqlite3.SQLite3.Cursor (class)" class="class">sqlite3.SQLite3.Cursor</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3/cursor.html" title="sqlite3.SQLite3.Cursor (class)" class="class">sqlite3.SQLite3.Cursor</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml.html" title="xml (namespace)" class="namespace">xml</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/domimplementation.html" title="xml.DOMImplementation (class)" class="class">xml.DOMImplementation</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/htmlparser.html" title="xml.HTMLParser (class)" class="class">xml.HTMLParser</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/xmlparser.html" title="xml.XMLParser (class)" class="class">xml.XMLParser</a>
+              </div>
+</li></ul></li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../commonjs_core_section.html" title="CommonJS Core section (section)" class="section">CommonJS Core section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../commonjs core/dollarrequire.html" title="$require (utility)" class="utility">$require</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary.html" title="binary (namespace)" class="namespace">binary</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/binary.html" title="binary.Binary (mixin)" class="mixin">binary.Binary</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/bytearray.html" title="binary.ByteArray (class)" class="class">binary.ByteArray</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/bytestring.html" title="binary.ByteString (class)" class="class">binary.ByteString</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/encodings.html" title="encodings (namespace)" class="namespace">encodings</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../commonjs core/encodings/transcoder.html" title="encodings.Transcoder (class)" class="class">encodings.Transcoder</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/fs_base.html" title="fs_base (namespace)" class="namespace">fs_base</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/module.html" title="module (namespace)" class="namespace">module</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/require.html" title="require (namespace)" class="namespace">require</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/system.html" title="system (namespace)" class="namespace">system</a>
+              </div>
+</li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../flusspferd_core_section.html" title="Flusspferd Core section (section)" class="section">Flusspferd Core section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/flusspferd.html" title="flusspferd (namespace)" class="namespace">flusspferd</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/getopt.html" title="getopt (namespace)" class="namespace">getopt</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io.html" title="io (namespace)" class="namespace">io</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/binarystream.html" title="io.BinaryStream (class)" class="class">io.BinaryStream</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/file.html" title="io.File (class)" class="class">io.File</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/stream.html" title="io.Stream (mixin)" class="mixin">io.Stream</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/subprocess.html" title="subprocess (namespace)" class="namespace">subprocess</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/subprocess/subprocess.html" title="subprocess.Subprocess (class)" class="class">subprocess.Subprocess</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/util.html" title="util (namespace)" class="namespace">util</a>
+              </div>
+</li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../language_section.html" title="Language section (section)" class="section">Language section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../language/function.html" title="Function (namespace)" class="namespace">Function</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../language/json.html" title="JSON (namespace)" class="namespace">JSON</a>
+              </div>
+</li></ul></li>
+          
+        </ul> <!--- #api_menu =-->
+      </div> <!-- .sidebar-pane -->
+      <div class="sidebar-pane" id="search_pane">
+        <ul id="search_results" class="search-results menu-items scrollable"></ul>
+      </div> <!-- .sidebar-pane -->
+    </div> <!-- #sidebar -->
+
+
+    <div id="page">
+      <div class="masthead">
+        <div class="content">
+          <h1 class="logo">
+            Flusspferd API and module docs
+          </h1>
+        </div> <!-- .content -->
+      </div> <!-- .masthead -->
+      <div id="main" class="page-content">
+        
+        
+
+
+
+<ul class="breadcrumbs clearfix">
+  <li><a href="../../index.html">Home</a> &rarr;</li>
+  
+  <li><a href="../../bundled_modules_section.html">Bundled Modules</a> &rarr;</li>
+  
+</ul>
+
+<h2 class="page-title class">
+  <span class="type">class </span>cURL.Easy
+</h2>
+
+
+
+<div class="section section-description">
+  
+  <div class="section-title">
+    <h3>Description</h3>
+  </div> <!-- .section-title -->
+  
+  <div class="section-content">
+    <p>Provides a synchronous and quick interface.</p>
+
+<p>See <a href='http://curl.haxx.se/libcurl/c/libcurl-easy.html'>cURL&#8217;s easy Interface</a> if you are curious about the underlying C API.</p>
+  </div> <!-- .section-content -->
+  
+</div> <!--.section -->
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+<div class="section section-method-list">
+  <div class="section-title">
+    <h3>Methods</h3>
+  </div> <!-- .section-title -->
+  
+  <div class="section-content">
+    <ul class="method-list">
+      
+        <li><code><a href="../../bundled modules/curl/easy.html#cleanup-instance_method" title="cURL.Easy#cleanup (instance method)" class="instance-method">cleanup</a></code></li>
+      
+        <li><code><a href="../../bundled modules/curl/easy.html#escape-instance_method" title="cURL.Easy#escape (instance method)" class="instance-method">escape</a></code></li>
+      
+        <li><code><a href="../../bundled modules/curl/easy.html#new-constructor" title="new cURL.Easy (constructor)" class="constructor">new</a></code></li>
+      
+        <li><code><a href="../../bundled modules/curl/easy.html#perform-instance_method" title="cURL.Easy#perform (instance method)" class="instance-method">perform</a></code></li>
+      
+        <li><code><a href="../../bundled modules/curl/easy.html#reset-instance_method" title="cURL.Easy#reset (instance method)" class="instance-method">reset</a></code></li>
+      
+        <li><code><a href="../../bundled modules/curl/easy.html#unescape-instance_method" title="cURL.Easy#unescape (instance method)" class="instance-method">unescape</a></code></li>
+      
+        <li><code><a href="../../bundled modules/curl/easy.html#valid-instance_method" title="cURL.Easy#valid (instance method)" class="instance-method">valid</a></code></li>
+      
+    </ul>
+    
+    
+    
+    
+  </div> <!-- .section-content -->
+    
+</div> <!-- .section -->
+
+
+
+<div class="section section-constructor">
+  <div class="section-title">
+    <h3>Constructor</h3>
+  </div> <!-- .section-title -->
+
+  <div class="section-content">
+    <pre id="new-constructor" class="syntax"><code>new cURL.Easy()</code></pre>
+    
+    
+
+    <p><p>Create a new cURL.Easy handle.</p>
+
+<p>See <a href='http://curl.haxx.se/libcurl/c/curl_easy_init.html'>curl_easy_init</a>.</p></p>
+    
+  </div> <!-- .section-content -->
+  
+</div> <!-- .section -->
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="section section-instance_properties">
+      
+      <div class="section-title">
+        <h3>Instance properties</h3>        
+      </div> <!-- .section-title -->
+      
+      <div class="section-content">
+        <ul class="method-details-list">
+          <li class="method-description">
+  <h4 id="options-instance_property">options
+    <span class="method-permalink"><a href="../../bundled modules/curl/easy.html#options-instance_property">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">cURL.Easy#options -> EasyOpt</code></pre>
+  
+  
+  
+  
+	<p>The options property is used to set connection options (see <a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html'>curl_easy_setopt</a>).</p>
+
+<h2 id='example'>Example</h2>
+
+<pre><code>  c.options.url = &#39;http://www.google.com&#39;</code></pre>
+
+<h2 id='options'>Options</h2>
+
+<p>The following options are supported. See the libcurl documentation links. Flag parameters are class constants of <code><a href='../../bundled modules/curl.html' title='cURL (namespace)'>cURL</a></code> without the leading <code>CURL(_)</code>. (e.g. <code>CURLPROTO_HTTP</code> -&gt; <code>cURL.PROTO_HTTP</code>)</p>
+
+<ul>
+<li>integer: boolean or number</li>
+
+<li>string: string</li>
+
+<li>list: array of strings</li>
+</ul>
+
+<h6 id='behavior_options'>BEHAVIOR OPTIONS</h6>
+
+<ul>
+<li>
+<p>verbose, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTVERBOSE'>CURLOPT_VERBOSE</a>)</p>
+</li>
+
+<li>
+<p>header, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTHEADER'>CURLOPT_HEADER</a>)</p>
+</li>
+
+<li>
+<p>noprogress, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTNOPROGRESS'>CURLOPT_NOPROGRESS</a>)</p>
+</li>
+
+<li>
+<p>nosignal, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTNOSIGNAL'>CURLOPT_NOSIGNAL</a>)</p>
+
+<h6 id='callback_options'>CALLBACK OPTIONS</h6>
+</li>
+
+<li>
+<p>writefunction, function(buffer,size). <a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPT_WRITEFUNCTION'>CURLOPT_WRITEFUNCTION</a> Callback should except buffer and size as parameter. Buffer is a <code><a href='../../commonjs core/binary/bytearray.html' title='binary.ByteArray (class)'>binary.ByteArray</a></code> and size the size of each object. Should return the length of the buffer if everything is okay.</p>
+</li>
+
+<li>
+<p>readfunction, function(buffer,size,nmemb). <a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPT_READFUNCTION'>CURLOPT_READFUNCTION</a></p>
+</li>
+
+<li>
+<p>seekfunction, function(offset,origin). <a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPT_SEEKFUNCTION'>CURLOPT_SEEKFUNCTION</a></p>
+</li>
+
+<li>
+<p>progressfunction, function(dltotal,dlnow,ultotal,ulnow). <a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPT_PROGRESSFUNCTION'>CURLOPT_SEEKFUNCTION</a></p>
+</li>
+
+<li>
+<p>headerfunction, function(data,size). <a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPT_HEADERFUNCTION'>CURLOPT_HEADERFUNCTION</a></p>
+</li>
+
+<li>
+<p>debugfunction, function(infotype,buffer). <a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPT_DEBUGFUNCTION'>CURLOPT_DEBUGFUNCTION</a></p>
+</li>
+</ul>
+
+<h6 id='error_options'>ERROR OPTIONS</h6>
+
+<ul>
+<li>
+<p>failonerror, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFAILONERROR'>CURLOPT_FAILONERROR</a>)</p>
+
+<h6 id='network_options'>NETWORK OPTIONS</h6>
+</li>
+
+<li>
+<p>protocols, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROTOCOLS'>CURLOPT_PROTOCOLS</a>)</p>
+</li>
+
+<li>
+<p>redirProtocols, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTREDIRPROTOCOLS'>CURLOPT_REDIR_PROTOCOLS</a>)</p>
+</li>
+
+<li>
+<p>url, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTURL'>CURLOPT_URL</a>)</p>
+</li>
+
+<li>
+<p>proxy, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXY'>CURLOPT_PROXY</a>)</p>
+</li>
+
+<li>
+<p>proxyport, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXYPORT'>CURLOPT_PROXYPORT</a>)</p>
+</li>
+
+<li>
+<p>proxytype, integer. See cURL.PROXY_ (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXYTYPE'>CURLOPT_PROXYTYPE</a>)</p>
+</li>
+
+<li>
+<p>noproxy, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTNOPROXY'>CURLOPT_NOPROXY</a>)</p>
+</li>
+
+<li>
+<p>httpProxyTunnel, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTHTTPPROXYTUNNEL'>CURLOPT_HTTPPROXYTUNNEL</a>)</p>
+</li>
+
+<li>
+<p>socks5GssapiService, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSOCKS5GSSAPISERVICE'>CURLOPT_SOCKS5_GSSAPI_SERVICE</a>)</p>
+</li>
+
+<li>
+<p>socks5GssapiNec, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSOCKS5GSSAPINEC'>CURLOPT_SOCKS5_GSSAPI_NEC</a>)</p>
+</li>
+
+<li>
+<p>interface, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTINTERFACE'>CURLOPT_INTERFACE</a>)</p>
+</li>
+
+<li>
+<p>localport, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTLOCALPORT'>CURLOPT_LOCALPORT</a>)</p>
+</li>
+
+<li>
+<p>localportrange, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTLOCALPORTRANGE'>CURLOPT_LOCALPORTRANGE</a>)</p>
+</li>
+
+<li>
+<p>dnsCacheTimeout, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTDNSCACHETIMEOUT'>CURLOPT_DNS_CACHE_TIMEOUT</a>)</p>
+</li>
+
+<li>
+<p>dnsUseGlobalCache, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTDNSUSEGLOBALCACHE'>CURLOPT_DNS_USE_GLOBAL_CACHE</a>)</p>
+</li>
+
+<li>
+<p>buffersize, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTBUFFERSIZE'>CURLOPT_BUFFERSIZE</a>)</p>
+</li>
+
+<li>
+<p>port, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPORT'>CURLOPT_PORT</a>)</p>
+</li>
+
+<li>
+<p>tcpNoDelay, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTCPNODELAY'>CURLOPT_TCP_NODELAY</a>)</p>
+</li>
+
+<li>
+<p>addressScope, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTADDRESSSCOPE'>CURLOPT_ADDRESS_SCOPE</a>)</p>
+
+<h6 id='names_and_passwords_options_authentication'>NAMES and PASSWORDS OPTIONS (Authentication)</h6>
+</li>
+
+<li>
+<p>netrc, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTNETRC'>CURLOPT_NETRC</a>)</p>
+</li>
+
+<li>
+<p>netrcFile, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTNETRCFILE'>CURLOPT_NETRC_FILE</a>)</p>
+</li>
+
+<li>
+<p>userpwd, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTUSERPWD'>CURLOPT_USERPWD</a>)</p>
+</li>
+
+<li>
+<p>proxyuserpwd, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXYUSERPWD'>CURLOPT_PROXYUSERPWD</a>)</p>
+</li>
+
+<li>
+<p>username, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTUSERNAME'>CURLOPT_USERNAME</a>)</p>
+</li>
+
+<li>
+<p>password, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPASSWORD'>CURLOPT_PASSWORD</a>)</p>
+</li>
+
+<li>
+<p>proxyusername, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXYUSERNAME'>CURLOPT_PROXYUSERNAME</a>)</p>
+</li>
+
+<li>
+<p>proxypassword, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXYPASSWORD'>CURLOPT_PROXYPASSWORD</a>)</p>
+</li>
+
+<li>
+<p>httpauth, integer. See cURL.AUTH_* (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTHTTPAUTH'>CURLOPT_HTTPAUTH</a>)</p>
+</li>
+
+<li>
+<p>proxyauth, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXYAUTH'>CURLOPT_PROXYAUTH</a>)</p>
+
+<h6 id='http_options'>HTTP OPTIONS</h6>
+</li>
+
+<li>
+<p>autoreferer, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTAUTOREFERER'>CURLOPT_AUTOREFERER</a>)</p>
+</li>
+
+<li>
+<p>encoding, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTENCODING'>CURLOPT_ENCODING</a>)</p>
+</li>
+
+<li>
+<p>followlocation, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFOLLOWLOCATION'>CURLOPT_FOLLOWLOCATION</a>)</p>
+</li>
+
+<li>
+<p>unrestrictedAuth, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTUNRESTRICTEDAUTH'>CURLOPT_UNRESTRICTED_AUTH</a>)</p>
+</li>
+
+<li>
+<p>maxredirs, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTMAXREDIRS'>CURLOPT_MAXREDIRS</a>)</p>
+</li>
+
+<li>
+<p>postredir, integer. See cURL.REDIR_* (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPOSTREDIR'>CURLOPT_POSTREDIR</a>)</p>
+</li>
+
+<li>
+<p>post, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPOST'>CURLOPT_POST</a>)</p>
+</li>
+
+<li>
+<p>postfields, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPOSTFIELDS'>CURLOPT_POSTFIELDS</a>)</p>
+</li>
+
+<li>
+<p>postfieldsize, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPOSTFIELDSIZE'>CURLOPT_POSTFIELDSIZE</a>)</p>
+</li>
+
+<li>
+<p>httppost, array of objects|object <a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPT_HTTPPOST'>CURLOPT_HTTPPOST</a> Expects a single object or an array of objects containing a property <code>name</code> and either <code>contents</code>, <code>contentslength</code>, <code>filecontent</code>, <code>file</code>, <code>contenttype</code> or <code>filename</code>. See libcurl docs.</p>
+</li>
+
+<li>
+<p>referer, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTREFERER'>CURLOPT_REFERER</a>)</p>
+</li>
+
+<li>
+<p>userAgent, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTUSERAGENT'>CURLOPT_USERAGENT</a>)</p>
+</li>
+
+<li>
+<p>httpheader, list (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTHTTPHEADER'>CURLOPT_HTTPHEADER</a>)</p>
+</li>
+
+<li>
+<p>http200aliases, list (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTHTTP200ALIASES'>CURLOPT_HTTP200ALIASES</a>)</p>
+</li>
+
+<li>
+<p>cookie, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCOOKIE'>CURLOPT_COOKIE</a>)</p>
+</li>
+
+<li>
+<p>cookieFile, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCOOKIEFILE'>CURLOPT_COOKIEFILE</a>)</p>
+</li>
+
+<li>
+<p>cookiejar, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCOOKIEJAR'>CURLOPT_COOKIEJAR</a>)</p>
+</li>
+
+<li>
+<p>cookiesession, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCOOKIESESSION'>CURLOPT_COOKIESESSION</a>)</p>
+</li>
+
+<li>
+<p>cookielist, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCOOKIELIST'>CURLOPT_COOKIELIST</a>)</p>
+</li>
+
+<li>
+<p>httpGet, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTHTTPGET'>CURLOPT_HTTPGET</a>)</p>
+</li>
+
+<li>
+<p>httpVersion, integer. See cURL.HTTP_VERSION_* (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTHTTPVERSION'>CURLOPT_HTTP_VERSION</a>)</p>
+</li>
+
+<li>
+<p>ignoreContentLength, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTIGNORECONTENTLENGTH'>CURLOPT_IGNORE_CONTENT_LENGTH</a>)</p>
+</li>
+
+<li>
+<p>httpContentDecoding, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTHTTPCONTENTDECODING'>CURLOPT_HTTP_CONTENT_DECODING</a>)</p>
+</li>
+
+<li>
+<p>httpTransferDecoding, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTHTTPTRANSFERDECODING'>CURLOPT_HTTP_TRANSFER_DECODING</a>)</p>
+
+<h6 id='tftp_options'>TFTP OPTIONS</h6>
+</li>
+
+<li>
+<p>tftpBlksize, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTFTPBLKSIZE'>CURLOPT_TFTP_BLKSIZE</a>)</p>
+
+<h6 id='ftp_options'>FTP OPTIONS</h6>
+</li>
+
+<li>
+<p>ftpPort, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPPORT'>CURLOPT_FTPPORT</a>)</p>
+</li>
+
+<li>
+<p>quote, list (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTQUOTE'>CURLOPT_QUOTE</a>)</p>
+</li>
+
+<li>
+<p>postquote, list (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPOSTQUOTE'>CURLOPT_POSTQUOTE</a>)</p>
+</li>
+
+<li>
+<p>prequote, list (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPREQUOTE'>CURLOPT_PREQUOTE</a>)</p>
+</li>
+
+<li>
+<p>dirListOnly, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTDIRLISTONLY'>CURLOPT_DIRLISTONLY</a>)</p>
+</li>
+
+<li>
+<p>append, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTAPPEND'>CURLOPT_APPEND</a>)</p>
+</li>
+
+<li>
+<p>ftpUseEprt, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPUSEEPRT'>CURLOPT_FTP_USE_EPRT</a>)</p>
+</li>
+
+<li>
+<p>ftpUseEpsv, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPUSEEPSV'>CURLOPT_FTP_USE_EPSV</a>)</p>
+</li>
+
+<li>
+<p>ftpCreateMissingDirs, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPCREATEMISSINGDIRS'>CURLOPT_FTP_CREATE_MISSING_DIRS</a>)</p>
+</li>
+
+<li>
+<p>ftpResponseTimeout, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPRESPONSETIMEOUT'>CURLOPT_FTP_RESPONSE_TIMEOUT</a>)</p>
+</li>
+
+<li>
+<p>ftpAltnerativeToUser, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPALTERNATIVETOUSER'>CURLOPT_FTP_ALTERNATIVE_TO_USER</a>)</p>
+</li>
+
+<li>
+<p>ftpSkipPasvIp, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPSKIPPASVIP'>CURLOPT_FTP_SKIP_PASV_IP</a>)</p>
+</li>
+
+<li>
+<p>usessl, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTUSESSL'>CURLOPT_USE_SSL</a>)</p>
+</li>
+
+<li>
+<p>ftpsslauth, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPSSLAUTH'>CURLOPT_FTPSSLAUTH</a>)</p>
+</li>
+
+<li>
+<p>ftpSslCcc, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPSSLCCC'>CURLOPT_FTP_SSL_CCC</a>)</p>
+</li>
+
+<li>
+<p>ftpAccount, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPACCOUNT'>CURLOPT_FTP_ACCOUNT</a>)</p>
+</li>
+
+<li>
+<p>ftpFilemethod, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFTPFILEMETHOD'>CURLOPT_FTP_FILEMETHOD</a>)</p>
+
+<h6 id='protocol_options'>PROTOCOL OPTIONS</h6>
+</li>
+
+<li>
+<p>transfertext, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTRANSFERTEXT'>CURLOPT_TRANSFERTEXT</a>)</p>
+</li>
+
+<li>
+<p>proxyTransferMode, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXYTRANSFERMODE'>CURLOPT_PROXY_TRANSFER_MODE</a>)</p>
+</li>
+
+<li>
+<p>crlf, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCRLF'>CURLOPT_CRLF</a>)</p>
+</li>
+
+<li>
+<p>range, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTRANGE'>CURLOPT_RANGE</a>)</p>
+</li>
+
+<li>
+<p>resumeFrom, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTRESUMEFROM'>CURLOPT_RESUME_FROM</a>)</p>
+</li>
+
+<li>
+<p>customrequest, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCUSTOMREQUEST'>CURLOPT_CUSTOMREQUEST</a>)</p>
+</li>
+
+<li>
+<p>filetime, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFILETIME'>CURLOPT_FILETIME</a>)</p>
+</li>
+
+<li>
+<p>nobody, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTNOBODY'>CURLOPT_NOBODY</a>)</p>
+</li>
+
+<li>
+<p>infilesize, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTINFILESIZE'>CURLOPT_INFILESIZE</a>)</p>
+</li>
+
+<li>
+<p>upload, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTUPLOAD'>CURLOPT_UPLOAD</a>)</p>
+</li>
+
+<li>
+<p>maxfilesize, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTMAXFILESIZE'>CURLOPT_MAXFILESIZE</a>)</p>
+</li>
+
+<li>
+<p>timecondition, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTIMECONDITION'>CURLOPT_TIMECONDITION</a>)</p>
+</li>
+
+<li>
+<p>timevalue, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTIMEVALUE'>CURLOPT_TIMEVALUE</a>)</p>
+
+<h6 id='connection_options'>CONNECTION OPTIONS</h6>
+</li>
+
+<li>
+<p>timeout, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTIMEOUT'>CURLOPT_TIMEOUT</a>)</p>
+</li>
+
+<li>
+<p>timeoutMS, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTIMEOUTMS'>CURLOPT_TIMEOUT_MS</a>)</p>
+</li>
+
+<li>
+<p>lowSpeedLimit, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTLOWSPEEDLIMIT'>CURLOPT_LOW_SPEED_LIMIT</a>)</p>
+</li>
+
+<li>
+<p>lowSpeedTime, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTLOWSPEEDTIME'>CURLOPT_LOW_SPEED_TIME</a>)</p>
+</li>
+
+<li>
+<p>maxSendSpeed, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTMAXSENDSPEEDLARGE'>CURLOPT_MAX_SEND_SPEED_LARGE</a>)</p>
+</li>
+
+<li>
+<p>maxRecvSpeed, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTMAXRECVSPEEDLARGE'>CURLOPT_MAX_RECV_SPEED_LARGE</a>)</p>
+</li>
+
+<li>
+<p>maxconnects, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTMAXCONNECTS'>CURLOPT_MAXCONNECTS</a>)</p>
+</li>
+
+<li>
+<p>freshConnect, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFRESHCONNECT'>CURLOPT_FRESH_CONNECT</a>)</p>
+</li>
+
+<li>
+<p>forbidReuse, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTFORBIDREUSE'>CURLOPT_FORBID_REUSE</a>)</p>
+</li>
+
+<li>
+<p>connecttimeout, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCONNECTTIMEOUT'>CURLOPT_CONNECTTIMEOUT</a>)</p>
+</li>
+
+<li>
+<p>connecttimeoutMS, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCONNECTTIMEOUTMS'>CURLOPT_CONNECTTIMEOUT_MS</a>)</p>
+</li>
+
+<li>
+<p>ipresolve, integer. See cURL.IPRESOLVE_* (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTIPRESOLVE'>CURLOPT_IPRESOLVE</a>)</p>
+</li>
+
+<li>
+<p>connectOnly, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCONNECTONLY'>CURLOPT_CONNECT_ONLY</a>)</p>
+
+<h6 id='ssl_and_security_options'>SSL and SECURITY OPTIONS</h6>
+</li>
+
+<li>
+<p>sslcert, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLCERT'>CURLOPT_SSLCERT</a>)</p>
+</li>
+
+<li>
+<p>sslcerttype, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLCERTTYPE'>CURLOPT_SSLCERTTYPE</a>)</p>
+</li>
+
+<li>
+<p>sslkey, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLKEY'>CURLOPT_SSLKEY</a>)</p>
+</li>
+
+<li>
+<p>sslkeytype, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLKEYTYPE'>CURLOPT_SSLKEYTYPE</a>)</p>
+</li>
+
+<li>
+<p>keypasswd, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTKEYPASSWD'>CURLOPT_KEYPASSWD</a>)</p>
+</li>
+
+<li>
+<p>sslengine, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLENGINE'>CURLOPT_SSLENGINE</a>)</p>
+</li>
+
+<li>
+<p>sslengineDefault, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLENGINEDEFAULT'>CURLOPT_SSLENGINE_DEFAULT</a>)</p>
+</li>
+
+<li>
+<p>sslversion, integer. See cURL.SSLVERSION_* (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLVERSION'>CURLOPT_SSLVERSION</a>)</p>
+</li>
+
+<li>
+<p>sslVerifypeer, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLVERIFYPEER'>CURLOPT_SSL_VERIFYPEER</a>)</p>
+</li>
+
+<li>
+<p>cainfo, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCAINFO'>CURLOPT_CAINFO</a>)</p>
+</li>
+
+<li>
+<p>issuercert, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTISSUERCERT'>CURLOPT_ISSUERCERT</a>)</p>
+</li>
+
+<li>
+<p>capath, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCAPATH'>CURLOPT_CAPATH</a>)</p>
+</li>
+
+<li>
+<p>crlfile, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCRLFILE'>CURLOPT_CRLFILE</a>)</p>
+</li>
+
+<li>
+<p>certinfo, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCERTINFO'>CURLOPT_CERTINFO</a>)</p>
+</li>
+
+<li>
+<p>randomFile, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTRANDOMFILE'>CURLOPT_RANDOM_FILE</a>)</p>
+</li>
+
+<li>
+<p>egdsocket, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTEGDSOCKET'>CURLOPT_EGDSOCKET</a>)</p>
+</li>
+
+<li>
+<p>sslVerifyhost, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLVERIFYHOST'>CURLOPT_SSL_VERIFYHOST</a>)</p>
+</li>
+
+<li>
+<p>sslCipherList, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLCIPHERLIST'>CURLOPT_SSL_CIPHER_LIST</a>)</p>
+</li>
+
+<li>
+<p>sslSessionidCache, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSLSESSIONIDCACHE'>CURLOPT_SSL_SESSIONID_CACHE</a>)</p>
+</li>
+
+<li>
+<p>krblevel, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTKRBLEVEL'>CURLOPT_KRBLEVEL</a>)</p>
+
+<h6 id='ssh_options'>SSH OPTIONS</h6>
+</li>
+
+<li>
+<p>sshAuthTypes, integer. See cURL.SSH_AUTH* (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSHAUTHTYPES'>CURLOPT_SSH_AUTH_TYPES</a>)</p>
+</li>
+
+<li>
+<p>sshHostPublicKeyMd5, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSHHOSTPUBLICKEYMD5'>CURLOPT_SSH_HOST_PUBLIC_KEY_MD5</a>)</p>
+</li>
+
+<li>
+<p>sshPublicKeyfile, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSHPUBLICKEYFILE'>CURLOPT_SSH_PUBLIC_KEYFILE</a>)</p>
+</li>
+
+<li>
+<p>sshPrivateKeyfile, string (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTSSHPRIVATEKEYFILE'>CURLOPT_SSH_PRIVATE_KEYFILE</a>)</p>
+
+<h6 id='other_options'>OTHER OPTIONS</h6>
+</li>
+
+<li>
+<p>newFilePerms, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTNEWFILEPERMS'>CURLOPT_NEW_FILE_PERMS</a>)</p>
+</li>
+
+<li>
+<p>newDirectoryPerms, integer (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTNEWDIRECTORYPERMS'>CURLOPT_NEW_DIRECTORY_PERMS</a>)</p>
+
+<h6 id='telnet_options'>TELNET OPTIONS</h6>
+</li>
+
+<li>
+<p>telnetoptions, list (<a href='http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTELNETOPTIONS'>CURLOPT_TELNETOPTIONS</a>)</p>
+</li>
+</ul>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+        </ul>    
+        
+      </div> <!-- .section-content -->
+    </div> <!-- .section -->
+  
+
+  
+  
+
+  
+  
+    <div class="section section-instance_methods">
+      
+      <div class="section-title">
+        <h3>Instance methods</h3>        
+      </div> <!-- .section-title -->
+      
+      <div class="section-content">
+        <ul class="method-details-list">
+          <li class="method-description">
+  <h4 id="cleanup-instance_method">cleanup
+    <span class="method-permalink"><a href="../../bundled modules/curl/easy.html#cleanup-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">cURL.Easy#cleanup() &rArr; undefined<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Destroy cURL object and free resources. cURL objects are cleaned up when garbage collected. You do not need to call this manually.</p>
+
+<p>See <a href='http://curl.haxx.se/libcurl/c/curl_easy_cleanup.html'>curl_easy_cleanup</a>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="escape-instance_method">escape
+    <span class="method-permalink"><a href="../../bundled modules/curl/easy.html#escape-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">cURL.Easy#escape(String) &rArr; String<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>URL encodes the given string.</p>
+
+<p>See <a href='http://curl.haxx.se/libcurl/c/curl_easy_escape.html'>curl_easy_escape</a> and <code><a href='../../bundled modules/curl/easy.html#unescape-instance_method' title='cURL.Easy#unescape (instance method)'>cURL.Easy#unescape</a></code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="perform-instance_method">perform
+    <span class="method-permalink"><a href="../../bundled modules/curl/easy.html#perform-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">cURL.Easy#perform() &rArr; undefined<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Perform the file transfer. Throws an exception on error.</p>
+
+<p>See <a href='http://curl.haxx.se/libcurl/c/curl_easy_perform.html'>curl_easy_perform</a>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="reset-instance_method">reset
+    <span class="method-permalink"><a href="../../bundled modules/curl/easy.html#reset-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">cURL.Easy#reset() &rArr; undefined<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Reset options to initial defaults.</p>
+
+<p>See <a href='http://curl.haxx.se/libcurl/c/curl_easy_reset.html'>curl_easy_reset</a>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="unescape-instance_method">unescape
+    <span class="method-permalink"><a href="../../bundled modules/curl/easy.html#unescape-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">cURL.Easy#unescape(String) &rArr; String<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>URL decodes the given string.</p>
+
+<p>See <a href='http://curl.haxx.se/libcurl/c/curl_easy_unescape.html'>curl_easy_unescape</a> and <code><a href='../../bundled modules/curl/easy.html#escape-instance_method' title='cURL.Easy#escape (instance method)'>cURL.Easy#escape</a></code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="valid-instance_method">valid
+    <span class="method-permalink"><a href="../../bundled modules/curl/easy.html#valid-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">cURL.Easy#valid() &rArr; Boolean<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Returns true if the object is valid.</p>
+
+<p>See <code><a href='../../bundled modules/curl/easy.html#cleanup-instance_method' title='cURL.Easy#cleanup (instance method)'>cURL.Easy#cleanup</a></code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+        </ul>    
+        
+      </div> <!-- .section-content -->
+    </div> <!-- .section -->
+  
+
+
+      </div> <!-- #main -->
+      
+      <div id="footer">
+        <div class="content clearfix">
+          
+          <div class="cc clearfix">
+            
+            <p>Most of this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">MIT License</a>. Modules are licensed under the terms set out in the module page/source.</p>
+          </div> <!-- .cc -->
+          
+          <div class="credits">
+            Generated by <a href="http://pdoc.org">PDoc</a>. Uses <a href="http://famfamfam.com/lab/icons/silk/" title="famfamfam.com: Silk Icons">Silk Icons</a> and portions of <a href="http://github.com/280north/aristo/tree/master" title="280north's aristo at master - GitHub">Aristo</a>.
+          </div> <!-- .credits -->
+          
+        </div> <!-- .content -->
+      </div> <!-- #footer -->
+
+    </div> <!-- #page -->
+  </body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>HippoDoc | gmp.Base mixin</title>
+  <meta name="generator" content="PDoc" />
+  
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/prototype.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/application.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../javascripts/code_highlighter.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../javascripts/tabs.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../javascripts/item_index.js"></script>
+  	  
+  <link type="text/css" href="../../stylesheets/api.css" media="screen, projection" charset="utf-8" rel="stylesheet" />
+  
+  <script type="text/javascript">
+    PDoc.pathPrefix = '../../';
+  </script>
+</head>
+  <body>
+
+    <div id="sidebar">
+      <ul id="sidebar_tabs" class="sidebar-tabs">
+        <li>
+          <a href="#menu_pane">Menu</a>
+        </li>
+        <li>
+          <a href="#search_pane">Search</a>
+        </li>
+      </ul> <!-- .sidebar-tabs -->
+
+      <form class="search-ribbon">
+        <label>
+          <span class="hidden">Search</span>
+          <input type="text" id="search" size="20" title="Search" />
+        </label>
+      </form>
+      
+      <div class="sidebar-pane scrollable" id="menu_pane">
+        <ul id="api_menu" class="menu-items">
+          
+            <li class="current-parent">              <div class='menu-item'>
+                <a href="../../bundled_modules_section.html" title="Bundled Modules section (section)" class="section">Bundled Modules section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../bundled modules/curl.html" title="cURL (namespace)" class="namespace">cURL</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/curl/easy.html" title="cURL.Easy (class)" class="class">cURL.Easy</a>
+              </div>
+</li></ul></li>
+<li class="current-parent">              <div class='menu-item'>
+                <a href="../../bundled modules/gmp.html" title="gmp (namespace)" class="namespace">gmp</a>
+              </div>
+<ul class=""><li class="current">              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)" class="mixin">gmp.Base</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/float.html" title="gmp.Float (class)" class="class">gmp.Float</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/integer.html" title="gmp.Integer (class)" class="class">gmp.Integer</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/gmp/rational.html" title="gmp.Rational (class)" class="class">gmp.Rational</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3.html" title="sqlite3 (namespace)" class="namespace">sqlite3</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3.html" title="sqlite3.SQLite3 (class)" class="class">sqlite3.SQLite3</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3/cursor.html" title="sqlite3.SQLite3.Cursor (class)" class="class">sqlite3.SQLite3.Cursor</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/sqlite3/sqlite3/cursor.html" title="sqlite3.SQLite3.Cursor (class)" class="class">sqlite3.SQLite3.Cursor</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml.html" title="xml (namespace)" class="namespace">xml</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/domimplementation.html" title="xml.DOMImplementation (class)" class="class">xml.DOMImplementation</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/htmlparser.html" title="xml.HTMLParser (class)" class="class">xml.HTMLParser</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../bundled modules/xml/xmlparser.html" title="xml.XMLParser (class)" class="class">xml.XMLParser</a>
+              </div>
+</li></ul></li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../commonjs_core_section.html" title="CommonJS Core section (section)" class="section">CommonJS Core section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../commonjs core/dollarrequire.html" title="$require (utility)" class="utility">$require</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary.html" title="binary (namespace)" class="namespace">binary</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/binary.html" title="binary.Binary (mixin)" class="mixin">binary.Binary</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/bytearray.html" title="binary.ByteArray (class)" class="class">binary.ByteArray</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/binary/bytestring.html" title="binary.ByteString (class)" class="class">binary.ByteString</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/encodings.html" title="encodings (namespace)" class="namespace">encodings</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../commonjs core/encodings/transcoder.html" title="encodings.Transcoder (class)" class="class">encodings.Transcoder</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/fs_base.html" title="fs_base (namespace)" class="namespace">fs_base</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/module.html" title="module (namespace)" class="namespace">module</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/require.html" title="require (namespace)" class="namespace">require</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../commonjs core/system.html" title="system (namespace)" class="namespace">system</a>
+              </div>
+</li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../flusspferd_core_section.html" title="Flusspferd Core section (section)" class="section">Flusspferd Core section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/flusspferd.html" title="flusspferd (namespace)" class="namespace">flusspferd</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/getopt.html" title="getopt (namespace)" class="namespace">getopt</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io.html" title="io (namespace)" class="namespace">io</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/binarystream.html" title="io.BinaryStream (class)" class="class">io.BinaryStream</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/file.html" title="io.File (class)" class="class">io.File</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/io/stream.html" title="io.Stream (mixin)" class="mixin">io.Stream</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/subprocess.html" title="subprocess (namespace)" class="namespace">subprocess</a>
+              </div>
+<ul class=""><li>              <div class='menu-item'>
+                <a href="../../flusspferd core/subprocess/subprocess.html" title="subprocess.Subprocess (class)" class="class">subprocess.Subprocess</a>
+              </div>
+</li></ul></li>
+<li>              <div class='menu-item'>
+                <a href="../../flusspferd core/util.html" title="util (namespace)" class="namespace">util</a>
+              </div>
+</li></ul></li>
+          
+            <li>              <div class='menu-item'>
+                <a href="../../language_section.html" title="Language section (section)" class="section">Language section</a>
+              </div>
+<ul class="menu-section"><li>              <div class='menu-item'>
+                <a href="../../language/function.html" title="Function (namespace)" class="namespace">Function</a>
+              </div>
+</li>
+<li>              <div class='menu-item'>
+                <a href="../../language/json.html" title="JSON (namespace)" class="namespace">JSON</a>
+              </div>
+</li></ul></li>
+          
+        </ul> <!--- #api_menu =-->
+      </div> <!-- .sidebar-pane -->
+      <div class="sidebar-pane" id="search_pane">
+        <ul id="search_results" class="search-results menu-items scrollable"></ul>
+      </div> <!-- .sidebar-pane -->
+    </div> <!-- #sidebar -->
+
+
+    <div id="page">
+      <div class="masthead">
+        <div class="content">
+          <h1 class="logo">
+            Flusspferd API and module docs
+          </h1>
+        </div> <!-- .content -->
+      </div> <!-- .masthead -->
+      <div id="main" class="page-content">
+        
+        
+
+
+
+<ul class="breadcrumbs clearfix">
+  <li><a href="../../index.html">Home</a> &rarr;</li>
+  
+  <li><a href="../../bundled_modules_section.html">Bundled Modules</a> &rarr;</li>
+  
+</ul>
+
+<h2 class="page-title mixin">
+  <span class="type">mixin </span>gmp.Base
+</h2>
+
+
+
+<div class="section section-description">
+  
+  <div class="section-title">
+    <h3>Description</h3>
+  </div> <!-- .section-title -->
+  
+  <div class="section-content">
+    <p>Common behaviour shared between all GMP classes.</p>
+
+<p>All the methods on this mixin that return <code><a href='../../bundled modules/gmp/base.html' title='gmp.Base (mixin)'>gmp.Base</a></code> infact return instances of the same type as the invocant &#8211; i.e. if <code><a href='../../bundled modules/gmp/base.html#abs-instance_method' title='gmp.Base#abs (instance method)'>gmp.Base#abs</a></code> is called on a <code><a href='../../bundled modules/gmp/integer.html' title='gmp.Integer (class)'>gmp.Integer</a></code> it will return an Integer.</p>
+  </div> <!-- .section-content -->
+  
+</div> <!--.section -->
+
+
+
+
+
+
+
+
+
+<div class="section section-method-list">
+  <div class="section-title">
+    <h3>Methods</h3>
+  </div> <!-- .section-title -->
+  
+  <div class="section-content">
+    <ul class="method-list">
+      
+        <li><code><a href="../../bundled modules/gmp/base.html#abs-instance_method" title="gmp.Base#abs (instance method)" class="instance-method">abs</a></code></li>
+      
+        <li><code><a href="../../bundled modules/gmp/base.html#add-instance_method" title="gmp.Base#add (instance method)" class="instance-method">add</a></code></li>
+      
+        <li><code><a href="../../bundled modules/gmp/base.html#cmp-instance_method" title="gmp.Base#cmp (instance method)" class="instance-method">cmp</a></code></li>
+      
+        <li><code><a href="../../bundled modules/gmp/base.html#div-instance_method" title="gmp.Base#div (instance method)" class="instance-method">div</a></code></li>
+      
+        <li><code><a href="../../bundled modules/gmp/base.html#mul-instance_method" title="gmp.Base#mul (instance method)" class="instance-method">mul</a></code></li>
+      
+        <li><code><a href="../../bundled modules/gmp/base.html#sgn-instance_method" title="gmp.Base#sgn (instance method)" class="instance-method">sgn</a></code></li>
+      
+        <li><code><a href="../../bundled modules/gmp/base.html#sub-instance_method" title="gmp.Base#sub (instance method)" class="instance-method">sub</a></code></li>
+      
+        <li><code><a href="../../bundled modules/gmp/base.html#todouble-instance_method" title="gmp.Base#toDouble (instance method)" class="instance-method">toDouble</a></code></li>
+      
+        <li><code><a href="../../bundled modules/gmp/base.html#tostring-instance_method" title="gmp.Base#toString (instance method)" class="instance-method">toString</a></code></li>
+      
+    </ul>
+    
+    
+    
+    
+  </div> <!-- .section-content -->
+    
+</div> <!-- .section -->
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="section section-instance_methods">
+      
+      <div class="section-title">
+        <h3>Instance methods</h3>        
+      </div> <!-- .section-title -->
+      
+      <div class="section-content">
+        <ul class="method-details-list">
+          <li class="method-description">
+  <h4 id="abs-instance_method">abs
+    <span class="method-permalink"><a href="../../bundled modules/gmp/base.html#abs-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">gmp.Base#abs() &rArr; <a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a><br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Return the absolute value of <code>this</code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="add-instance_method">add
+    <span class="method-permalink"><a href="../../bundled modules/gmp/base.html#add-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">gmp.Base#add(rhs) &rArr; <a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a><br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">rhs</code>
+            
+              <span class="argument-types">(<code>Number</code> | <code><a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a></code>)</span>
+            
+             &ndash; operand
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Returns <code>this + rhs</code> as the same concrete type as <code>this</code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="cmp-instance_method">cmp
+    <span class="method-permalink"><a href="../../bundled modules/gmp/base.html#cmp-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">gmp.Base#cmp(rhs) &rArr; Number<br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">rhs</code>
+            
+              <span class="argument-types">(<code>Number</code> | <code><a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a></code>)</span>
+            
+             &ndash; value to compare with
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Returns a positive value if <code>this &gt; rhs</code>, zero if <code>this == rhs</code>, and a negative value if <code>this &lt; rhs</code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="div-instance_method">div
+    <span class="method-permalink"><a href="../../bundled modules/gmp/base.html#div-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">gmp.Base#div(rhs) &rArr; <a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a><br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">rhs</code>
+            
+              <span class="argument-types">(<code>Number</code> | <code><a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a></code>)</span>
+            
+             &ndash; operand
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Returns <code>this / rhs</code> as the same concrete type as <code>this</code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="mul-instance_method">mul
+    <span class="method-permalink"><a href="../../bundled modules/gmp/base.html#mul-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">gmp.Base#mul(rhs) &rArr; <a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a><br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">rhs</code>
+            
+              <span class="argument-types">(<code>Number</code> | <code><a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a></code>)</span>
+            
+             &ndash; operand
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Returns <code>this * rhs</code> as the same concrete type as <code>this</code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="sgn-instance_method">sgn
+    <span class="method-permalink"><a href="../../bundled modules/gmp/base.html#sgn-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">gmp.Base#sgn() &rArr; Number<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Return an integer indication the sign of the value: 1 if &gt; 0, 0 if == 0, and -1 if &lt; 0.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="sub-instance_method">sub
+    <span class="method-permalink"><a href="../../bundled modules/gmp/base.html#sub-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">gmp.Base#sub(rhs) &rArr; <a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a><br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">rhs</code>
+            
+              <span class="argument-types">(<code>Number</code> | <code><a href="../../bundled modules/gmp/base.html" title="gmp.Base (mixin)">gmp.Base</a></code>)</span>
+            
+             &ndash; operand
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Returns <code>this - rhs</code> as the same concrete type as <code>this</code>.</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="todouble-instance_method">toDouble
+    <span class="method-permalink"><a href="../../bundled modules/gmp/base.html#todouble-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">gmp.Base#toDouble() &rArr; Number<br /></code></pre>
+  
+  
+  
+    
+  
+  
+	<p>Returns the value as a floating point number</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+<li class="method-description">
+  <h4 id="tostring-instance_method">toString
+    <span class="method-permalink"><a href="../../bundled modules/gmp/base.html#tostring-instance_method">#</a></span></h4>
+
+  
+    <pre class="syntax"><code class="ebnf">gmp.Base#toString([base = 10]) &rArr; String<br /></code></pre>
+  
+  
+  
+    
+      <ul class="argument-list">
+        
+          <li>
+            <code class="argument-name">base</code>
+            
+              <span class="argument-types">(<code>Number</code>)</span>
+            
+             &ndash; base to represent value in.
+          </li>
+        
+      </ul> <!-- .argument-list -->
+    
+  
+  
+	<p>Returns the value as a string</p>
+  
+    
+  
+    
+  
+    
+    
+    
+  
+</li>
+
+        </ul>    
+        
+      </div> <!-- .section-content -->
+    </div> <!-- .section -->
+  
+
+
+      </div> <!-- #main -->
+      
+      <div id="footer">
+        <div class="content clearfix">
+          
+          <div class="cc clearfix">
+            
+            <p>Most of this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">MIT License</a>. Modules are licensed under the terms set out in the module page/source.</p>
+          </div> <!-- .cc -->
+          
+          <div class="credits">
+            Generated by <a href="http://pdoc.org">PDoc</a>. Uses <a href="http://famfamfam.com/lab/icons/silk/" title="famfamfam.com: Silk Icons">Silk Icons</a> and portions of <a href="http://github.com/280north/aristo/tree/master" title="280north's aristo at master - GitHub">Aristo</a>.
+          </div> <!-- .credits -->
+          
+        </div> <!-- .content -->
+      </div> <!-- #footer -->
+
+    </div> <!-- #page -->
+  </body>
+</html>

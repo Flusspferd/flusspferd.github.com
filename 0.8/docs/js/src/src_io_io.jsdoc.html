@@ -1,0 +1,129 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">// vim: ft=cpp:foldmethod=marker:foldmarker={{{,}}}</span><span class="WHIT">
+<span class='line'>  2</span> </span><span class="COMM">/**
+<span class='line'>  3</span>  * @namespace io related classes
+<span class='line'>  4</span>  * @name io
+<span class='line'>  5</span>  *
+<span class='line'>  6</span>  * @see io.Stream
+<span class='line'>  7</span>  * @see io.File
+<span class='line'>  8</span>  * @see io.BinaryStream
+<span class='line'>  9</span>  */</span><span class="WHIT">
+<span class='line'> 10</span> 
+<span class='line'> 11</span> </span><span class="COMM">// io.Stream {{{</span><span class="WHIT">
+<span class='line'> 12</span> </span><span class="COMM">/**
+<span class='line'> 13</span>  * Not actually a class, but an interface
+<span class='line'> 14</span>  * @name io.Stream
+<span class='line'> 15</span>  * @class
+<span class='line'> 16</span>  * Interface for all io streams to follow
+<span class='line'> 17</span>  */</span><span class="WHIT">
+<span class='line'> 18</span> 
+<span class='line'> 19</span> </span><span class="COMM">// Stream instance methods {{{</span><span class="WHIT">
+<span class='line'> 20</span> </span><span class="COMM">/**#@+ @methodOf io.Stream# */</span><span class="WHIT">
+<span class='line'> 21</span> 
+<span class='line'> 22</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 23</span>    * Read UTF-8 data. If the stream contains an invalid UTF-8 bye sequence, an
+<span class='line'> 24</span>    * exception will be thrown.
+<span class='line'> 25</span>    *
+<span class='line'> 26</span>    * @name read
+<span class='line'> 27</span>    * @type string
+<span class='line'> 28</span>    *
+<span class='line'> 29</span>    * @param [size=4096] number of bytes to read.
+<span class='line'> 30</span>    */</span><span class="WHIT">
+<span class='line'> 31</span> 
+<span class='line'> 32</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 33</span>    * Read binary data
+<span class='line'> 34</span>    *
+<span class='line'> 35</span>    * @name readBinary
+<span class='line'> 36</span>    * @type Binary
+<span class='line'> 37</span>    * @param [size=4096] number of bytes to read.
+<span class='line'> 38</span>    * @param {ByteArray} [output] If defined/non-null, the output data will be appended to this ByteArray. Otherwise, a new ByteString will be created.
+<span class='line'> 39</span>    */</span><span class="WHIT">
+<span class='line'> 40</span> 
+<span class='line'> 41</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 42</span>    * Read a line from the stream
+<span class='line'> 43</span>    *
+<span class='line'> 44</span>    * @name readLine
+<span class='line'> 45</span>    * @type string
+<span class='line'> 46</span>    * @param [separator="\n"] The line separator to use.  Must be a single ASCII
+<span class='line'> 47</span>    *                         character currently.
+<span class='line'> 48</span>    */</span><span class="WHIT">
+<span class='line'> 49</span> 
+<span class='line'> 50</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 51</span>    * Read entire stream as UTF-8 string
+<span class='line'> 52</span>    *
+<span class='line'> 53</span>    * @name readWhole
+<span class='line'> 54</span>    * @type string
+<span class='line'> 55</span>    */</span><span class="WHIT">
+<span class='line'> 56</span> 
+<span class='line'> 57</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 58</span>    * Read entire stream contents as binary data.
+<span class='line'> 59</span>    *
+<span class='line'> 60</span>    * @name readWholeBinary
+<span class='line'> 61</span>    * @type Binary
+<span class='line'> 62</span>    * @param {ByteArray} [output] If defined/non-null, the output data will be appended to this ByteArray. Otherwise, a new ByteString will be created.
+<span class='line'> 63</span>    */</span><span class="WHIT">
+<span class='line'> 64</span> 
+<span class='line'> 65</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 66</span>    * Write either a string, in which case the UTF-8 byte sequence is
+<span class='line'> 67</span>    * written, or else a Binary where the raw binary data is written.
+<span class='line'> 68</span>    *
+<span class='line'> 69</span>    * @name write
+<span class='line'> 70</span>    *
+<span class='line'> 71</span>    * @param data stringOrBinary
+<span class='line'> 72</span>    */</span><span class="WHIT">
+<span class='line'> 73</span> 
+<span class='line'> 74</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 75</span>    * Flush internal/OS buffers.
+<span class='line'> 76</span>    * @name flush
+<span class='line'> 77</span>    */</span><span class="WHIT">
+<span class='line'> 78</span> 
+<span class='line'> 79</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 80</span>    * Print strings to this stream. This method converts each argument passed to
+<span class='line'> 81</span>    * a string, writes them to the string with [[#fieldSeperator]] between
+<span class='line'> 82</span>    * each one and [[#recordSeparator]] after the last one.
+<span class='line'> 83</span>    *
+<span class='line'> 84</span>    * &lt;br />&lt;br />
+<span class='line'> 85</span>    *
+<span class='line'> 86</span>    * @name print
+<span class='line'> 87</span>    * @param ... values to print
+<span class='line'> 88</span>    */</span><span class="WHIT">
+<span class='line'> 89</span> 
+<span class='line'> 90</span> </span><span class="COMM">/**#@- }}} */</span><span class="WHIT">
+<span class='line'> 91</span> 
+<span class='line'> 92</span> </span><span class="COMM">// Stream instance properties {{{</span><span class="WHIT">
+<span class='line'> 93</span> </span><span class="COMM">/**#@+ @fieldOf io.Stream# */</span><span class="WHIT">
+<span class='line'> 94</span> 
+<span class='line'> 95</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 96</span>    * Printed between every argument to [[#print]].
+<span class='line'> 97</span>    *
+<span class='line'> 98</span>    * @name fieldSeperator
+<span class='line'> 99</span>    * @default " "
+<span class='line'>100</span>    * @type string
+<span class='line'>101</span>    */</span><span class="WHIT">
+<span class='line'>102</span> 
+<span class='line'>103</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>104</span>    * Printed at the end of each [[#print]] call.
+<span class='line'>105</span>    *
+<span class='line'>106</span>    * @name recordSeparator
+<span class='line'>107</span>    * @default "\n"
+<span class='line'>108</span>    * @type string
+<span class='line'>109</span>    */</span><span class="WHIT">
+<span class='line'>110</span> 
+<span class='line'>111</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>112</span>    * Call flush after every write.
+<span class='line'>113</span>    *
+<span class='line'>114</span>    * @name autoFlush
+<span class='line'>115</span>    * @default false
+<span class='line'>116</span>    * @type boolean
+<span class='line'>117</span>    */</span><span class="WHIT">
+<span class='line'>118</span> 
+<span class='line'>119</span> </span><span class="COMM">/**#@- }}} */</span><span class="WHIT">
+<span class='line'>120</span> 
+<span class='line'>121</span> </span><span class="COMM">/// }}}</span><span class="WHIT">
+<span class='line'>122</span> </span></pre></body></html>

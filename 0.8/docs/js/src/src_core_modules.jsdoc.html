@@ -1,0 +1,64 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">// vim: ft=javascript:foldmethod=marker:foldmarker={{{,}}}</span><span class="WHIT">
+<span class='line'>  2</span> 
+<span class='line'>  3</span> </span><span class="COMM">/**
+<span class='line'>  4</span>  * Load a module. require is defined as a top level function on the global
+<span class='line'>  5</span>  * object.
+<span class='line'>  6</span>  *
+<span class='line'>  7</span>  * @constructor
+<span class='line'>  8</span>  * @name require
+<span class='line'>  9</span>  *
+<span class='line'> 10</span>  * @param {string} name Module to attempt to load
+<span class='line'> 11</span>  *
+<span class='line'> 12</span>  * @example
+<span class='line'> 13</span>  * require.paths.unshift('./lib');
+<span class='line'> 14</span>  * exports = require('My/Module') // Will look for My/Module.js
+<span class='line'> 15</span>  *
+<span class='line'> 16</span>  * @class
+<span class='line'> 17</span>  *
+<span class='line'> 18</span>  * require is not really a class, that's just the only way I could get JsDoc to
+<span class='line'> 19</span>  * document properties on the function.
+<span class='line'> 20</span>  *
+<span class='line'> 21</span>  * Please note, that all the properties listed below are properties of the
+<span class='line'> 22</span>  * require function itself.
+<span class='line'> 23</span>  */</span><span class="WHIT">
+<span class='line'> 24</span> 
+<span class='line'> 25</span> </span><span class="COMM">// require properties {{{</span><span class="WHIT">
+<span class='line'> 26</span> </span><span class="COMM">/**#@+ @fieldOf require */</span><span class="WHIT">
+<span class='line'> 27</span> 
+<span class='line'> 28</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 29</span>    * List of directories to search for modules in.
+<span class='line'> 30</span>    * @type Array
+<span class='line'> 31</span>    * @name paths
+<span class='line'> 32</span>    */</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 34</span>    * Dictionary of currently loaded modules.
+<span class='line'> 35</span>    * @name module_cache
+<span class='line'> 36</span>    * @type Object
+<span class='line'> 37</span>    */</span><span class="WHIT">
+<span class='line'> 38</span> 
+<span class='line'> 39</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 40</span>    * Dictionary of callback functions. The first time a module name matching a
+<span class='line'> 41</span>    * key in perload is loaded, the function stored there will be called.
+<span class='line'> 42</span>    * @name preload
+<span class='line'> 43</span>    * @type Object
+<span class='line'> 44</span>    */</span><span class="WHIT">
+<span class='line'> 45</span> 
+<span class='line'> 46</span> 
+<span class='line'> 47</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'> 48</span>    * Dictionary of aliases. The destination is designated by a string only.
+<span class='line'> 49</span>    * There is no recursive alias lookup. Aliases will be resolved before
+<span class='line'> 50</span>    * anything else.
+<span class='line'> 51</span>    * @name alias
+<span class='line'> 52</span>    * @type Object
+<span class='line'> 53</span>    */</span><span class="WHIT">
+<span class='line'> 54</span> 
+<span class='line'> 55</span> </span><span class="COMM">/**#@- }}} */</span><span class="WHIT">
+<span class='line'> 56</span> 
+<span class='line'> 57</span> </span></pre></body></html>

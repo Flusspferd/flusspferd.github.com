@@ -1,0 +1,1006 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Flusspferd JS Reference - gmp.Rational</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="index.html">Class Index</a>
+| <a href="files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="_global_">_global_</a></i></li>
+	
+	<li><a href="Array">Array</a></li>
+	
+	<li><a href="Function">Function</a></li>
+	
+	<li><a href="gmp">gmp</a></li>
+	
+	<li><a href="gmp.Float">gmp.Float</a></li>
+	
+	<li><a href="gmp.Integer">gmp.Integer</a></li>
+	
+	<li><a href="gmp.Rational">gmp.Rational</a></li>
+	
+	<li><a href="io">io</a></li>
+	
+	<li><a href="io.BinaryStream">io.BinaryStream</a></li>
+	
+	<li><a href="io.File">io.File</a></li>
+	
+	<li><a href="io.Stream">io.Stream</a></li>
+	
+	<li><a href="Object">Object</a></li>
+	
+	<li><a href="require">require</a></li>
+	
+	<li><a href="SQLite3">SQLite3</a></li>
+	
+	<li><a href="SQLite3.Cursor">SQLite3.Cursor</a></li>
+	
+	<li><a href="String">String</a></li>
+	
+	<li><a href="Util.Range">Util.Range</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Class gmp.Rational
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<div class="description">
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="src/src_plugins_gmp_gmp.jsdoc.html">src/plugins/gmp/gmp.jsdoc</a>.
+				
+			</div>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class gmp.Rational.">
+				<caption>Class Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="gmp.Rational">gmp.Rational</a></b>()
+							</div>
+							<div class="description"><p>Provides a bignum rational class (see gmp's mpq_t, mpq_class)</p>
+</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class gmp.Rational.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>get_double()()</b>()
+								</div>
+								<div class="description"><p>returns the value as a double</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>get_string()()</b>()
+								</div>
+								<div class="description"><p>returns the value as a string</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>get_string_base()()</b>(base)
+								</div>
+								<div class="description"><p>returns the value as a string in a specific base</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>canonicalize()()</b>()
+								</div>
+								<div class="description"><p>Puts the object into canonical form</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>get_num()()</b>()
+								</div>
+								<div class="description"><p>returns the numerator</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>get_den()()</b>()
+								</div>
+								<div class="description"><p>returns the denominator</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>sgn()()</b>()
+								</div>
+								<div class="description"><p>returns the signum</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>abs()()</b>()
+								</div>
+								<div class="description"><p>returns the absolute value</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>cmp()()</b>(op)
+								</div>
+								<div class="description"><p>compares value to another Float, double or integer</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>add()()</b>(op)
+								</div>
+								<div class="description"><p>returns the addition of value with an operator</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>sub()()</b>(op)
+								</div>
+								<div class="description"><p>returns the subtraction of operator from value</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>mul()()</b>(op)
+								</div>
+								<div class="description"><p>returns the multiplication of value with operator</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b>div()()</b>(op)
+								</div>
+								<div class="description"><p>returns the dividion of value by operator</p>
+</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Class Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>gmp.Rational</b>()
+				</div>
+				
+				<div class="description">
+					<p>Provides a bignum rational class (see gmp's mpq_t, mpq_class)</p>
+
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						<dl class="detailList">
+						<dt class="heading">See:</dt>
+						
+							<dd><a href="gmp.Integer">gmp.Integer</a></dd>
+						
+							<dd><a href="gmp.Float">gmp.Float</a></dd>
+						
+						</dl>
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name="get_double()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>get_double()</b>()
+					
+					</div>
+					<div class="description">
+						<p>returns the value as a double</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>double</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="get_string()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>get_string()</b>()
+					
+					</div>
+					<div class="description">
+						<p>returns the value as a string</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>string</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="get_string_base()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>get_string_base()</b>(base)
+					
+					</div>
+					<div class="description">
+						<p>returns the value as a string in a specific base</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>base</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>string</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="canonicalize()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>canonicalize()</b>()
+					
+					</div>
+					<div class="description">
+						<p>Puts the object into canonical form</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="get_num()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>get_num()</b>()
+					
+					</div>
+					<div class="description">
+						<p>returns the numerator</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>gmp.Integer</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="get_den()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>get_den()</b>()
+					
+					</div>
+					<div class="description">
+						<p>returns the denominator</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>gmp.Integer</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="sgn()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>sgn()</b>()
+					
+					</div>
+					<div class="description">
+						<p>returns the signum</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>integer</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="abs()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>abs()</b>()
+					
+					</div>
+					<div class="description">
+						<p>returns the absolute value</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>gmp.Rational</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="cmp()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>cmp()</b>(op)
+					
+					</div>
+					<div class="description">
+						<p>compares value to another Float, double or integer</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>op</b>
+									
+								</dt>
+								<dd><p>compare to</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>integer Returns a positive value if value > op, zero if value == op, and a negative value if value < op.</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="add()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>add()</b>(op)
+					
+					</div>
+					<div class="description">
+						<p>returns the addition of value with an operator</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>op</b>
+									
+								</dt>
+								<dd><p>added to value</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>gmp.Rational value + op</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="sub()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>sub()</b>(op)
+					
+					</div>
+					<div class="description">
+						<p>returns the subtraction of operator from value</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>op</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>gmp.Rational</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="mul()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>mul()</b>(op)
+					
+					</div>
+					<div class="description">
+						<p>returns the multiplication of value with operator</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>op</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>gmp.Rational</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="div()"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>div()</b>(op)
+					
+					</div>
+					<div class="description">
+						<p>returns the dividion of value by operator</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>op</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>gmp.Rational</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.1.0 on Mon Oct 26 2009 08:51:32 GMT-0000 (UTC)
+		</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7744305-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+	</body>
+</html>

@@ -1,0 +1,901 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Flusspferd JS Reference - SQLite3</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="index.html">Class Index</a>
+| <a href="files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="_global_">_global_</a></i></li>
+	
+	<li><a href="Array">Array</a></li>
+	
+	<li><a href="Function">Function</a></li>
+	
+	<li><a href="gmp">gmp</a></li>
+	
+	<li><a href="gmp.Float">gmp.Float</a></li>
+	
+	<li><a href="gmp.Integer">gmp.Integer</a></li>
+	
+	<li><a href="gmp.Rational">gmp.Rational</a></li>
+	
+	<li><a href="io">io</a></li>
+	
+	<li><a href="io.BinaryStream">io.BinaryStream</a></li>
+	
+	<li><a href="io.File">io.File</a></li>
+	
+	<li><a href="io.Stream">io.Stream</a></li>
+	
+	<li><a href="Object">Object</a></li>
+	
+	<li><a href="require">require</a></li>
+	
+	<li><a href="SQLite3">SQLite3</a></li>
+	
+	<li><a href="SQLite3.Cursor">SQLite3.Cursor</a></li>
+	
+	<li><a href="String">String</a></li>
+	
+	<li><a href="Util.Range">Util.Range</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Class SQLite3
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<div class="description">
+				
+			
+				<p>SQLite3 Database handle.</p>
+<h2>Example:</h2>
+<pre class="code">
+const SQLite3 = require('sqlite3').SQLite3;
+var db = new SQLite3('./my_db.sqlite');
+var c = db.cursor('SELECT * FROM table_1 WHERE id IN (?,?)');
+c.bind([4,6]);
+
+for (let row in c) {
+ print(row.toSource());
+}
+</pre>
+				
+				
+					<br /><i>Defined in: </i> <a href="src/src_plugins_sqlite3_sqlite3.js.html">src/plugins/sqlite3/sqlite3.js</a>.
+				
+			</div>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class SQLite3.">
+				<caption>Class Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="SQLite3">SQLite3</a></b>(dsn)
+							</div>
+							<div class="description"><p>Opens a handle to the database dsn Will usually be
+a filename, but could also be ":memory:".</p>
+</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class SQLite3.">
+					<caption>Field Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Field Attributes</th>
+							<th scope="col">Field Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								SQLite3.<b><a href="SQLite3#.versionStr">versionStr</a></b>
+								</div>
+								<div class="description"><p>SQLite3 version as human readable string</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								SQLite3.<b><a href="SQLite3#.version">version</a></b>
+								</div>
+								<div class="description"><p>SQLite3 version as an integer.</p>
+</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class SQLite3.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="SQLite3#close">close</a></b>()
+								</div>
+								<div class="description"><p>Close the database handle.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="SQLite3#lastInsertID">lastInsertID</a></b>()
+								</div>
+								<div class="description"><p>Returns the row id of the last inserted column</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="SQLite3#exec">exec</a></b>(sql, optional_bind_args)
+								</div>
+								<div class="description"><p>Executes a given SQL statement and optionally, bind parameters 
+can be passed to fill the placeholders in the SQL statement </p>
+<p><strong> Note: </strong></p>
+<p>If the execution throws an exception and the execution is aborted 
+it will not automatically rollback the applied changes.</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="SQLite3#execMany">execMany</a></b>(sql)
+								</div>
+								<div class="description"><p>Executes given SQL statement(s).</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="SQLite3#begin">begin</a></b>()
+								</div>
+								<div class="description"><p>Begin a transaction</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="SQLite3#commit">commit</a></b>()
+								</div>
+								<div class="description"><p>Commit a transaction</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="SQLite3#rollback">rollback</a></b>()
+								</div>
+								<div class="description"><p>Rollback a transaction</p>
+</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="SQLite3#query">query</a></b>(sql, bind_arg)
+								</div>
+								<div class="description"><p>Get a cursor to execute the given SQL statement.</p>
+</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Class Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>SQLite3</b>(dsn)
+				</div>
+				
+				<div class="description">
+					<p>Opens a handle to the database dsn Will usually be
+a filename, but could also be ":memory:".</p>
+
+					
+				</div>
+				
+				
+				
+				
+					
+						<dl class="detailList">
+						<dt class="heading">Parameters:</dt>
+						
+							<dt>
+								 <b>dsn</b>
+								
+							</dt>
+								<dd><p>Path to sqlite DB file (or anything else it sqlite3_open
+       supports)</p>
+</dd>
+						
+						</dl>
+					
+					
+					
+					
+					
+					
+					
+						<dl class="detailList">
+						<dt class="heading">See:</dt>
+						
+							<dd><a href="SQLite3.Cursor">SQLite3.Cursor</a></dd>
+						
+						</dl>
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+				<div class="sectionTitle">
+					Field Detail
+				</div>
+				
+					<a name=".versionStr"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">SQLite3.</span><b>versionStr</b>
+					
+					</div>
+					<div class="description">
+						<p>SQLite3 version as human readable string</p>
+
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".version"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{int}</span>
+					<span class="light">SQLite3.</span><b>version</b>
+					
+					</div>
+					<div class="description">
+						<p>SQLite3 version as an integer. For example, SQLite v3.6.12 would have a
+version of 3006012</p>
+
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					
+				
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name="close"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>close</b>()
+					
+					</div>
+					<div class="description">
+						<p>Close the database handle. Force the database handle to be closed now,
+instead of when the object gets garbage collected.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="lastInsertID"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>lastInsertID</b>()
+					
+					</div>
+					<div class="description">
+						<p>Returns the row id of the last inserted column</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>the last inserted row id as a number</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="exec"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>exec</b>(sql, optional_bind_args)
+					
+					</div>
+					<div class="description">
+						<p>Executes a given SQL statement and optionally, bind parameters 
+can be passed to fill the placeholders in the SQL statement </p>
+<p><strong> Note: </strong></p>
+<p>If the execution throws an exception and the execution is aborted 
+it will not automatically rollback the applied changes. If this is wanted
+the user of this function has to explicitly take care about it by using
+<a href="SQLite3#begin">SQLite3#begin</a>,<a href="SQLite3#commit">SQLite3#commit</a> and <a href="SQLite3#rollback">SQLite3#rollback</a></p>
+<h2>Example usage:</h2>
+<pre class="code"> 
+db.exec('CREATE TABLE foobar (a,b,c)');
+
+db.exec('INSERT INTO foobar VALUES(?,?,?)',[1,2,3]);
+
+db.exec('INSERT INTO foobar VALUES(:first, :second, :third)',
+        { first: 4, second: 5, third: 6 });
+</pre>
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>sql</b>
+									
+								</dt>
+								<dd><p>SQL to execute which might contain placeholders</p>
+</dd>
+							
+								<dt>
+									<b>optional_bind_args</b>
+									
+								</dt>
+								<dd><p>bind parameters passed to <a href="SQLite3.Cursor#bind">SQLite3.Cursor#bind</a>.</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>number of rows affected by the statement</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="execMany"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>execMany</b>(sql)
+					
+					</div>
+					<div class="description">
+						<p>Executes given SQL statement(s). Bind parameters can be passed to fill
+placeholders used in the corresponding SQL statement.</p>
+<p>The parameter is expected to be an array of 
+objects with sql and optional bind properties. The bind property should
+contain a value, an array or an object. The object can be used for
+named placeholders</p>
+<p><strong> Note: </strong></p>
+<p>If the execution throws an exception and the execution is aborted 
+it will not automatically rollback the applied changes. If this is wanted
+the user of this function has to explicitly take care about it by using
+<a href="SQLite3#begin">SQLite3#begin</a>,<a href="SQLite3#commit">SQLite3#commit</a> and <a href="SQLite3#rollback">SQLite3#rollback</a></p>
+<h2>Example:</h2>
+<pre class="code"> 
+db.exec([{ 
+       sql: 'CREATE TABLE foobar (a,b,c)'
+   }, {
+       sql: 'INSERT INTO foobar VALUES(?,?,?)',
+       bind: [1,2,3]
+   }, {
+       sql: 'INSERT INTO foobar VALUES(:first, :second, :third)',
+       bind: { first: 4, second: 5, third: 6 }
+   }])
+</pre>
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>sql</b>
+									
+								</dt>
+								<dd><p>SQL statment to execute which can contain placeholders</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><p>total number of rows affected by the given statements</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="begin"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>begin</b>()
+					
+					</div>
+					<div class="description">
+						<p>Begin a transaction</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="commit"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>commit</b>()
+					
+					</div>
+					<div class="description">
+						<p>Commit a transaction</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="rollback"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>rollback</b>()
+					
+					</div>
+					<div class="description">
+						<p>Rollback a transaction</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="query"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="SQLite3.Cursor">SQLite3.Cursor</a>}</span>
+					<b>query</b>(sql, bind_arg)
+					
+					</div>
+					<div class="description">
+						<p>Get a cursor to execute the given SQL statement. Bind parameters can be
+passed in as parameters the SQL, or by using <a href="SQLite3.Cursor#bind">SQLite3.Cursor#bind</a>.</p>
+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>sql</b>
+									
+								</dt>
+								<dd><p>SQL to prepare.</p>
+</dd>
+							
+								<dt>
+									<b>bind_arg</b>
+									
+								</dt>
+								<dd><p>bind parameters passed to <a href="SQLite3.Cursor#bind">SQLite3.Cursor#bind</a>.</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="SQLite3.Cursor">SQLite3.Cursor</a>}</span> <p>A cursor object</p>
+</dd>
+							
+							</dl>
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.1.0 on Mon Oct 26 2009 08:51:33 GMT-0000 (UTC)
+		</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7744305-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+	</body>
+</html>

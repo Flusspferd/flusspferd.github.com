@@ -1,0 +1,192 @@
+<!-- Creator     : groff version 1.20.1 -->
+<!-- CreationDate: Thu Feb  4 23:08:11 2010 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>FLUSSPFERD</title>
+
+</head>
+<body>
+
+<h1 align="center">FLUSSPFERD</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#EXAMPLES">EXAMPLES</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+<a href="#AUTHOR">AUTHOR</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">flusspferd
+&minus; interactive Javascript shell/repl</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>flusspferd</b>
+[<i>OPTION</i>] ... [<i>FILE</i>|-] [<i>ARG</i>] ...</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>flusspferd</b>
+is an interactive Javascript shell/repl based on the
+Flusspferd Javascript library. It can be used to run and
+test Javascript code.</p>
+
+<p style="margin-left:11%; margin-top: 1em">It will look
+for modules in the system paths and additionally in
+<i>$FLUSSPFERD_USER_MODULES</i> if defined, or
+<i>$HOME</i>/.flusspferd/modules otherwise.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>-z</b>,
+<b>--gc-zeal</b> <i>int</i></p>
+
+<p style="margin-left:22%;">Set zealous GC mode: 0, 1 or
+2</p>
+
+<p style="margin-left:11%;"><b>--no-jit</b></p>
+
+<p style="margin-left:22%;">Disables JIT mode</p>
+
+<p style="margin-left:11%;"><b>--history-file</b>
+<i>file</i></p>
+
+<p style="margin-left:22%;">Sets history file (default:
+~/.flusspferd-history)</p>
+
+<p style="margin-left:11%;"><b>--no-global-history</b></p>
+
+<p style="margin-left:22%;">Do not use a global history in
+interactive mode.</p>
+
+<p style="margin-left:11%;"><b>-m</b>, <b>--main</b>
+<i>module</i></p>
+
+<p style="margin-left:22%;">Load module as the main
+module.</p>
+
+<p style="margin-left:11%;"><b>-M</b>, <b>--module</b>
+<i>module</i></p>
+
+<p style="margin-left:22%;">Load module.</p>
+
+<p style="margin-left:11%;"><b>-I</b>,
+<b>--include-path</b> <i>path</i></p>
+
+<p style="margin-left:22%;">Add include path.</p>
+
+<p style="margin-left:11%;"><b>-e</b>, <b>--expression</b>
+<i>expr</i></p>
+
+<p style="margin-left:22%;">Evaluate the expression.</p>
+
+<p style="margin-left:11%;"><b>-f</b>, <b>--file</b>
+<i>file</i></p>
+
+<p style="margin-left:22%;">Run this file before standard
+script handling.</p>
+
+<p style="margin-left:11%;"><b>-0</b>,
+<b>--machine-mode</b></p>
+
+<p style="margin-left:22%;">(Interactive) machine command
+mode (separator &rsquo;\0&rsquo;).</p>
+
+<p style="margin-left:11%;"><b>-i</b>,
+<b>--interactive</b></p>
+
+<p style="margin-left:22%;">Enter interactive mode (after
+files).</p>
+
+<p style="margin-left:11%;"><b>-c</b>, <b>--config</b>
+<i>file</i></p>
+
+<p style="margin-left:22%;">Load config from file.</p>
+
+<p style="margin-left:11%;"><b>--cmake</b></p>
+
+<p style="margin-left:22%;">Print location to
+Flusspferd.cmake file and exit.</p>
+
+<p style="margin-left:11%;"><b>-v</b>, <b>--version</b></p>
+
+<p style="margin-left:22%;">Print version and exit.</p>
+
+<p style="margin-left:11%;"><b>-h</b>, <b>--help</b></p>
+
+<p style="margin-left:22%;">Displays this message.</p>
+
+<h2>EXAMPLES
+<a name="EXAMPLES"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">$
+<b>flusspferd</b> <br>
+will run flusspferd in an interactive repl/shell mode.</p>
+
+<p style="margin-left:11%; margin-top: 1em">$ <b>flusspferd
+flusspferd.js</b> <br>
+will execute the file <i>flusspferd.js</i> and then
+quit.</p>
+
+<p style="margin-left:11%; margin-top: 1em">$ <b>flusspferd
+-i flusspferd.js</b> <br>
+will execute the file <i>flusspferd.js</i> and then run in
+an interactive repl/shell mode.</p>
+
+<p style="margin-left:11%; margin-top: 1em">$ <b>flusspferd
+-e &rsquo;print(&quot;hello world&quot;);&rsquo;</b> <br>
+will execute the expression &rsquo;print(&quot;hello
+world&quot;);&rsquo;.</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">For more
+information see our homepage at
+<i>http://www.flusspferd.org</i></p>
+
+<h2>AUTHOR
+<a name="AUTHOR"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Flusspferd Team
+&lt;<i>team -AT- flusspferd -DOT- org</i>&gt;</p>
+<hr>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">// vim:ts=2:sw=2:expandtab:autoindent:</span><span class="WHIT">
+<span class='line'>  2</span> </span><span class="COMM">/*
+<span class='line'>  3</span> Copyright (c) 2008, 2009 Aristid Breitkreuz, Ash Berlin, Ruediger Sonderfeld
+<span class='line'>  4</span> 
+<span class='line'>  5</span> Permission is hereby granted, free of charge, to any person obtaining a copy
+<span class='line'>  6</span> of this software and associated documentation files (the "Software"), to deal
+<span class='line'>  7</span> in the Software without restriction, including without limitation the rights
+<span class='line'>  8</span> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+<span class='line'>  9</span> copies of the Software, and to permit persons to whom the Software is
+<span class='line'> 10</span> furnished to do so, subject to the following conditions:
+<span class='line'> 11</span> 
+<span class='line'> 12</span> The above copyright notice and this permission notice shall be included in
+<span class='line'> 13</span> all copies or substantial portions of the Software.
+<span class='line'> 14</span> 
+<span class='line'> 15</span> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+<span class='line'> 16</span> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+<span class='line'> 17</span> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+<span class='line'> 18</span> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+<span class='line'> 19</span> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+<span class='line'> 20</span> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+<span class='line'> 21</span> THE SOFTWARE.
+<span class='line'> 22</span> */</span><span class="WHIT">
+<span class='line'> 23</span> 
+<span class='line'> 24</span> </span><span class="COMM">/**
+<span class='line'> 25</span>  * Construct a cURL object. Takes no parameters
+<span class='line'> 26</span>  * @name cURL
+<span class='line'> 27</span>  * @constructor
+<span class='line'> 28</span>  *
+<span class='line'> 29</span>  * @class 
+<span class='line'> 30</span>  * Network access via libcurl.
+<span class='line'> 31</span>  *
+<span class='line'> 32</span>  * == Example: ==
+<span class='line'> 33</span>  * {{{
+<span class='line'> 34</span>  * require('cURL')
+<span class='line'> 35</span>  * c = new cURL();
+<span class='line'> 36</span>  * c.url = 'http://www.google.com';
+<span class='line'> 37</span>  * var status = c.perform();
+<span class='line'> 38</span>  *
+<span class='line'> 39</span>  * // Currently there is no auto-following of redirects, so:
+<span class='line'> 40</span>  * while (status >= 300 &amp;&amp; status &lt;= 399) {
+<span class='line'> 41</span>  *   c.url = c.header.Location;
+<span class='line'> 42</span>  *   status = c.perform();
+<span class='line'> 43</span>  * }
+<span class='line'> 44</span>  * IO.stdout.write(c.responseBlob);
+<span class='line'> 45</span>  * }}}
+<span class='line'> 46</span>  *
+<span class='line'> 47</span>  * Link to [[Blob]]
+<span class='line'> 48</span>  */</span><span class="WHIT">
+<span class='line'> 49</span> </span><span class="PUNC">(</span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 50</span> </span><span class="WHIT">  </span><span class="KEYW">try</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 51</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">cURL</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">exports.cURL</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="COMM">// get cURL as exported from the binary module</span><span class="WHIT">
+<span class='line'> 52</span> 
+<span class='line'> 53</span> </span><span class="WHIT">    </span><span class="COMM">// If we have HTTP/Headers, define a default header callback that</span><span class="WHIT">
+<span class='line'> 54</span> </span><span class="WHIT">    </span><span class="COMM">// creates </span><span class="WHIT">
+<span class='line'> 55</span> </span><span class="WHIT">    </span><span class="NAME">require</span><span class="PUNC">(</span><span class="STRN">'HTTP/Headers'</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 56</span> 
+<span class='line'> 57</span> </span><span class="WHIT">    </span><span class="COMM">/** 
+<span class='line'> 58</span>      * Array of protocols by the linked version of libcurl.
+<span class='line'> 59</span>      * @name supportedProtocols
+<span class='line'> 60</span>      * @fieldOf cURL
+<span class='line'> 61</span>      */</span><span class="WHIT">
+<span class='line'> 62</span> </span><span class="WHIT">    </span><span class="COMM">/** 
+<span class='line'> 63</span>      * libcurl version number in hex. For example 7.18.2 is `0x071202`
+<span class='line'> 64</span>      * @name versionHex
+<span class='line'> 65</span>      * @fieldOf cURL
+<span class='line'> 66</span>      * @type int
+<span class='line'> 67</span>      */</span><span class="WHIT">
+<span class='line'> 68</span> </span><span class="WHIT">    </span><span class="COMM">/** 
+<span class='line'> 69</span>      * libcurl version number in dotted-decimal string form.
+<span class='line'> 70</span>      * @name cURL#versionStr
+<span class='line'> 71</span>      * @fieldOf cURL
+<span class='line'> 72</span>      * @type string
+<span class='line'> 73</span>      */</span><span class="WHIT">
+<span class='line'> 74</span> 
+<span class='line'> 75</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'> 76</span>      * The URL to request
+<span class='line'> 77</span>      * @name url
+<span class='line'> 78</span>      * @fieldOf cURL.prototype
+<span class='line'> 79</span>      */</span><span class="WHIT">
+<span class='line'> 80</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'> 81</span>      * HTTP Protocol version. Unknown/undefined for non-HTTP requests. See 
+<span class='line'> 82</span>      * [[#headerReceived]] for caveats.
+<span class='line'> 83</span>      * @name protocol
+<span class='line'> 84</span>      * @fieldof cURL.prototype
+<span class='line'> 85</span>      * @type strings
+<span class='line'> 86</span>      */</span><span class="WHIT">
+<span class='line'> 87</span> </span><span class="WHIT">    </span><span class="COMM">/** 
+<span class='line'> 88</span>      * Numeric status code. Might not be defined for non-HTTP requests. See
+<span class='line'> 89</span>      * [[#headerReceived]] for caveats.
+<span class='line'> 90</span>      * @name status
+<span class='line'> 91</span>      * @fieldof cURL.prototype
+<span class='line'> 92</span>      * @type int
+<span class='line'> 93</span>      */</span><span class="WHIT">
+<span class='line'> 94</span> </span><span class="WHIT">    </span><span class="COMM">/** 
+<span class='line'> 95</span>      * Human readable status message. Might not be defined for non-HTTP
+<span class='line'> 96</span>      * requests. See [[#headerReceived]] for caveats.
+<span class='line'> 97</span>      * @name statusMessage
+<span class='line'> 98</span>      * @fieldof cURL.prototype
+<span class='line'> 99</span>      * @type string
+<span class='line'>100</span>      */</span><span class="WHIT">
+<span class='line'>101</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>102</span>      * Binary response content. If you replace the
+<span class='line'>103</span>      * [[#dataReceived]] callback than you will have to update this blob
+<span class='line'>104</span>      * yourself.
+<span class='line'>105</span>      * @name responseBlob
+<span class='line'>106</span>      * @fieldOf cURL.prototype
+<span class='line'>107</span>      * @type Blob
+<span class='line'>108</span>      */</span><span class="WHIT">
+<span class='line'>109</span> 
+<span class='line'>110</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>111</span>      * HTTP response headers (if applicable). See [[#headerReceived]] for
+<span class='line'>112</span>      * caveats.
+<span class='line'>113</span>      * @name headers
+<span class='line'>114</span>      * @fieldOf cURL.prototype
+<span class='line'>115</span>      * @type HTTP.Headers
+<span class='line'>116</span>      */</span><span class="WHIT">
+<span class='line'>117</span> 
+<span class='line'>118</span> 
+<span class='line'>119</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>120</span>      * Set the request method to use when [[#perform]] is called. Currently understood
+<span class='line'>121</span>      * values are "GET", "POST", "PUT" and "HEAD".
+<span class='line'>122</span>      * @name setMethod
+<span class='line'>123</span>      * @methodOf cURL.prototype
+<span class='line'>124</span>      *
+<span class='line'>125</span>      * @param {string} method request method
+<span class='line'>126</span>      */</span><span class="WHIT">
+<span class='line'>127</span> 
+<span class='line'>128</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>129</span>      * Called for each line of the headers. The line includes the new line
+<span class='line'>130</span>      * characters, and the end of headers are signified by "\r\n".&lt;br />&lt;br />
+<span class='line'>131</span>      *
+<span class='line'>132</span>      * Populates the [[#headers]], [[#protocol]], [[#status]] and
+<span class='line'>133</span>      * [[#statusMessage]] properties after all headers have been received.&lt;br
+<span class='line'>134</span>      * />&lt;br />
+<span class='line'>135</span>      *
+<span class='line'>136</span>      * This default implementation is conditionally provided on being able to
+<span class='line'>137</span>      * load the [[HTTP.Headers]] module. If it cannot be loaded then the
+<span class='line'>138</span>      * [[#headers]], [[#protocol]], [[#status]] and [[#statusMessage]]
+<span class='line'>139</span>      * properties will not be defined.
+<span class='line'>140</span>      *
+<span class='line'>141</span>      * @param line a single line of header data
+<span class='line'>142</span>      * @event
+<span class='line'>143</span>      */</span><span class="WHIT">
+<span class='line'>144</span> </span><span class="WHIT">    </span><span class="NAME">cURL.prototype.headerReceived</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">headerReceived</span><span class="PUNC">(</span><span class="NAME">hdr</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>145</span> </span><span class="WHIT">      </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">hdr.match</span><span class="PUNC">(</span><span class="REGX">/^\r\n/</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>146</span> </span><span class="WHIT">        </span><span class="COMM">// Empty line signals end of headers</span><span class="WHIT">
+<span class='line'>147</span> </span><span class="WHIT">        </span><span class="KEYW">try</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>148</span> </span><span class="WHIT">          </span><span class="COMM">// Pull out HTTP status line.</span><span class="WHIT">
+<span class='line'>149</span> </span><span class="WHIT">          </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">match</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="REGX">/^(HTTP\/1.[10])\s+(\d+)\s+(.*?)\r\n/</span><span class="PUNC">.</span><span class="NAME">exec</span><span class="PUNC">(</span><span class="NAME">this.header_buffer</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>150</span> </span><span class="WHIT">          </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">match</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>151</span> </span><span class="WHIT">            </span><span class="NAME">this.header_buffer</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">this.header_buffer.substr</span><span class="PUNC">(</span><span class="NAME">match</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">length</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>152</span> </span><span class="WHIT">            </span><span class="PUNC">[</span><span class="NAME">undefined</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.protocol</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.status</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.statusMessage</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">match</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>153</span> </span><span class="WHIT">          </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>154</span> 
+<span class='line'>155</span> </span><span class="WHIT">          </span><span class="NAME">this.headers</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">HTTP.Headers.parse</span><span class="PUNC">(</span><span class="NAME">this.header_buffer</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>156</span> </span><span class="WHIT">          </span><span class="KEYW">delete</span><span class="WHIT"> </span><span class="NAME">this.header_buffer</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>157</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>158</span> </span><span class="WHIT">        </span><span class="KEYW">catch</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">e</span><span class="PUNC">)</span><span class="WHIT"> 
+<span class='line'>159</span>         </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>160</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT"> </span><span class="COMM">// Do nothing on error</span><span class="WHIT">
+<span class='line'>161</span> </span><span class="WHIT">      </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>162</span> </span><span class="WHIT">      </span><span class="KEYW">else</span><span class="WHIT">
+<span class='line'>163</span> </span><span class="WHIT">        </span><span class="NAME">this.header_buffer</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">hdr</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>164</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>165</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>166</span> </span><span class="WHIT">  </span><span class="KEYW">catch</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">e</span><span class="WHIT"> </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="REGX">/Unable to find library/</span><span class="PUNC">.</span><span class="NAME">exec</span><span class="PUNC">(</span><span class="NAME">e</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>167</span> </span><span class="WHIT">  </span><span class="PUNC">{</span><span class="WHIT"> </span><span class="COMM">// Stomp on the module not found message</span><span class="WHIT">
+<span class='line'>168</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>169</span> 
+<span class='line'>170</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>171</span>    * Called when a chunk of body data is available. The default implementation
+<span class='line'>172</span>    * simply appends each chunk of data into [[#responseBlob]].
+<span class='line'>173</span>    * @event
+<span class='line'>174</span>    *
+<span class='line'>175</span>    * @param {Blob} blob chunk of response data
+<span class='line'>176</span>    */</span><span class="WHIT">
+<span class='line'>177</span> </span><span class="WHIT">  </span><span class="NAME">cURL.prototype.dataReceived</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">blob</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>178</span> </span><span class="WHIT">    </span><span class="NAME">this.responseBlob.append</span><span class="PUNC">(</span><span class="NAME">blob</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>179</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>180</span> 
+<span class='line'>181</span> </span><span class="WHIT">  </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">cURL.prototype.perform.old</span><span class="WHIT"> </span><span class="PUNC">===</span><span class="WHIT"> </span><span class="NAME">undefined</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>182</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">old_perform</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">cURL.prototype.perform</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>183</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>184</span>      * Perform the request on [[#url]].
+<span class='line'>185</span>      *
+<span class='line'>186</span>      * Before the request starts the [[#headers]], [[#protocol]], [[#status]],
+<span class='line'>187</span>      * [[#statusMessage]] and the [[#responseBlob]] properties are cleared
+<span class='line'>188</span>      */</span><span class="WHIT">
+<span class='line'>189</span> </span><span class="WHIT">    </span><span class="NAME">cURL.prototype.perform</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">perform</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>190</span> </span><span class="WHIT">      </span><span class="NAME">this.header_buffer</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>191</span> </span><span class="WHIT">      </span><span class="KEYW">delete</span><span class="WHIT"> </span><span class="NAME">this.headers</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>192</span> </span><span class="WHIT">      </span><span class="KEYW">delete</span><span class="WHIT"> </span><span class="NAME">this.protocol</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>193</span> </span><span class="WHIT">      </span><span class="KEYW">delete</span><span class="WHIT"> </span><span class="NAME">this.status</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>194</span> </span><span class="WHIT">      </span><span class="KEYW">delete</span><span class="WHIT"> </span><span class="NAME">this.statusMessage</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>195</span> </span><span class="WHIT">      </span><span class="NAME">this.responseBlob</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Blob</span><span class="PUNC">(</span><span class="NUMB">0</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>196</span> </span><span class="WHIT">      </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">perform.old.apply</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>197</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>198</span> </span><span class="WHIT">    </span><span class="NAME">cURL.prototype.perform.old</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">old_perform</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>199</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>200</span> 
+<span class='line'>201</span> </span><span class="WHIT">  </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">cURL</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>202</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>203</span> </span></pre></body></html>
